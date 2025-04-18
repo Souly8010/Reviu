@@ -1,0 +1,369 @@
+{
+  "navbar": {
+    "features": "Fonctionnalités",
+    "pricing": "Tarifs",
+    "stats": "Statistiques",
+    "about": "À propos",
+    "contact": "Contact",
+    "login": "Se connecter",
+    "register": "S'inscrire",
+    "logout": "Se déconnecter",
+    "dashboard": "Dashboard",
+    "tryFree": "Essayer gratuitement",
+    "backToHome": "Retour à l'accueil",
+    "hello": "Bonjour"
+  },
+  "languages": {
+    "fr": "Français",
+    "en": "Anglais",
+    "nl": "Néerlandais"
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "email": "Email",
+      "password": "Mot de passe",
+      "forgotPassword": "Mot de passe oublié ?",
+      "loginButton": "Se connecter",
+      "loginInProgress": "Connexion en cours...",
+      "noAccount": "Pas de compte ?",
+      "registerLink": "Inscrivez-vous",
+      "loginSuccess": "Connexion réussie !",
+      "errors": {
+        "timeout": "La connexion au serveur a pris trop de temps. Veuillez réessayer.",
+        "network": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion internet et réessayer.",
+        "default": "Erreur lors de la connexion. Veuillez réessayer."
+      }
+    },
+    "register": {
+      "title": "Inscription",
+      "pseudo": "Pseudo",
+      "email": "Email personnel",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "registerButton": "S'inscrire",
+      "registerInProgress": "Inscription en cours...",
+      "alreadyAccount": "Déjà un compte ?",
+      "loginLink": "Se connecter",
+      "registerSuccess": "Inscription réussie !",
+      "phoneNumber": "Numéro de téléphone",
+      "googleBusinessEmail": "Email professionnel Google Business",
+      "errors": {
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "timeout": "La connexion au serveur a pris trop de temps. Veuillez réessayer.",
+        "network": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion internet et réessayer.",
+        "default": "Erreur lors de l'inscription. Veuillez réessayer."
+      }
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "email": "Email",
+      "resetButton": "Réinitialiser le mot de passe",
+      "resetInProgress": "Envoi en cours...",
+      "backToLogin": "Retour à la connexion",
+      "successMessage": "Un email de réinitialisation a été envoyé à votre adresse email.",
+      "errors": {
+        "timeout": "La connexion au serveur a pris trop de temps. Veuillez réessayer.",
+        "network": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion internet et réessayer.",
+        "default": "Erreur lors de l'envoi de l'email. Veuillez réessayer."
+      }
+    },
+    "resetPassword": {
+      "title": "Réinitialisation du mot de passe",
+      "newPassword": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "resetButton": "Changer le mot de passe",
+      "resetInProgress": "Réinitialisation en cours...",
+      "backToLogin": "Retour à la connexion",
+      "successMessage": "Votre mot de passe a été réinitialisé avec succès. Vous pouvez maintenant vous connecter avec votre nouveau mot de passe.",
+      "errors": {
+        "passwordMismatch": "Les mots de passe ne correspondent pas",
+        "invalidToken": "Le lien de réinitialisation est invalide ou a expiré.",
+        "timeout": "La connexion au serveur a pris trop de temps. Veuillez réessayer.",
+        "network": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion internet et réessayer.",
+        "default": "Erreur lors de la réinitialisation du mot de passe. Veuillez réessayer."
+      }
+    }
+  },
+  "features": {
+    "title": "Fonctionnalités",
+    "subtitle": "Découvrez ce que notre plateforme peut faire pour vous",
+    "feature1": {
+      "title": "Réponses automatiques",
+      "description": "Notre IA répond automatiquement aux avis laissés sur votre fiche Google Business, 24h/24, 7j/7."
+    },
+    "feature2": {
+      "title": "Personnalisation",
+      "description": "Nous avons développé une intelligence artificielle dotée d'algorithmes intelligents capables d'analyser les avis Google et d'y répondre automatiquement, avec un ton et un message adaptés."
+    },
+    "feature3": {
+      "title": "Audit et suivi",
+      "description": "Chaque fin de mois, recevez un résumé de vos performances :",
+      "list": {
+        "item1": "Nombre d'avis reçus",
+        "item2": "Ratio positifs/négatifs",
+        "item3": "Interactions clients",
+        "item4": "Suggestions clients",
+        "item5": "Score final"
+      },
+      "conclusion": "Accédez à votre journal d'audit pour suivre toutes vos activités."
+    },
+    "feature4": {
+      "title": "IA Multilingue",
+      "description": "Notre intelligence artificielle maîtrise plus de 50 langues et peut :",
+      "list": {
+        "item1": "Détecter automatiquement la langue de l'avis",
+        "item2": "Répondre dans la même langue",
+        "item3": "Adapter le style culturel",
+        "item4": "Gérer les expressions idiomatiques"
+      },
+      "conclusion": "Idéal pour les entreprises internationales et les zones touristiques."
+    },
+    "feature5": {
+      "title": "Notifications en temps réel",
+      "description": "Dès qu'une plainte est détectée sur votre fiche Google, vous recevez une alerte instantanée. L'IA se charge de répondre automatiquement pendant que vous êtes informé."
+    },
+    "feature6": {
+      "title": "Graphiques intelligents",
+      "description": "Visualisez l'impact de l'IA avec des graphiques dynamiques : avis positifs/négatifs, taux de réponse, rendement et bien plus, mis à jour en temps réel."
+    }
+  },
+  "pricing": {
+    "title": "Tarifs",
+    "subtitle": "Choisissez le plan qui correspond à vos besoins",
+    "monthly": "Mensuel",
+    "yearly": "Annuel",
+    "switchToAnnual": "Passer à l'année",
+    "switchToMonthly": "Passer au mois",
+    "trial": {
+      "title": "Version d'essai",
+      "description": "Gratuit – Essayez toutes les fonctionnalités pendant 14 jours, sans carte bancaire.",
+      "button": "Essayer gratuitement"
+    },
+    "basic": {
+      "title": "Basique",
+      "price": "29€",
+      "period": "/mois",
+      "annualPrice": "290€",
+      "annualPeriod": "/an",
+      "description": "Accès aux fonctionnalités principales",
+      "button": "Choisir Basique"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "49€",
+      "period": "/mois",
+      "annualPrice": "490€",
+      "annualPeriod": "/an",
+      "description": "Toutes les fonctionnalités",
+      "badge": "RECOMMANDÉ",
+      "button": "Choisir Pro"
+    },
+    "enterprise": {
+      "title": "Entreprises / Franchises",
+      "description": "Sur mesure – Solution personnalisée pour les grandes entreprises",
+      "button": "Demander un devis"
+    },
+    "alerts": {
+      "trialSuccess": "Félicitations ! Votre période d'essai de 14 jours avec accès Pro est activée.\n\nVous avez maintenant accès à toutes les fonctionnalités Pro pendant 2 semaines.",
+      "trialAlreadyUsed": "Désolé, vous avez déjà utilisé votre période d'essai gratuite.\n\nDécouvrez nos offres Pro pour continuer à profiter de toutes les fonctionnalités !",
+      "trialError": "Impossible d'activer votre période d'essai pour le moment.\n\nRaison : Erreur de connexion au serveur\n\nSolutions :\n• Vérifiez votre connexion internet\n• Rafraîchissez la page\n• Contactez notre support si le problème persiste",
+      "serverError": "Impossible de communiquer avec le serveur.\n\nSolutions :\n• Vérifiez votre connexion internet\n• Assurez-vous que vous êtes bien connecté\n• Réessayez dans quelques instants"
+    }
+  },
+  "stats": {
+    "title": "Statistiques",
+    "subtitle": "Nos chiffres clés",
+    "users": "Utilisateurs",
+    "businesses": "Entreprises",
+    "countries": "Pays",
+    "reviews": "Avis clients",
+    "charts": {
+      "title": "Statistiques intelligentes",
+      "description": "Découvrez comment notre IA performe en analysant les commentaires et en assurant un haut rendement de réponse automatique.",
+      "pieChart": {
+        "positiveReviews": "Avis positifs",
+        "negativeReviews": "Avis négatifs"
+      },
+      "lineChart": {
+        "yield": "Rendement (%)"
+      },
+      "months": {
+        "jan": "Jan",
+        "feb": "Fév",
+        "mar": "Mars",
+        "apr": "Avr",
+        "may": "Mai",
+        "jun": "Juin",
+        "jul": "Juil",
+        "aug": "Août",
+        "sep": "Sept",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Déc"
+      }
+    }
+  },
+  "about": {
+    "title": "À propos",
+    "subtitle": "Qui nous sommes",
+    "mission": {
+      "title": "Notre mission",
+      "description": "Chez <strong>Reviu</strong>, nous sommes spécialisés dans la gestion intelligente des <strong>avis Google</strong> grâce à notre plateforme alimentée par l'intelligence artificielle de pointe. Fondée en 2025 par une équipe passionnée d'experts en IA et en marketing digital, notre mission est de transformer la façon dont les entreprises interagissent avec leurs clients en ligne."
+    },
+    "problem": {
+      "title": "Le problème que nous résolvons",
+      "description1": "La gestion des avis clients est devenue un enjeu crucial pour toutes les entreprises, mais elle représente souvent une charge de travail considérable. Les études montrent que 93% des consommateurs lisent les avis en ligne avant de prendre une décision d'achat, et 97% considèrent que la réponse d'une entreprise à un avis influence leur perception de celle-ci.",
+      "description2": "Face à cet enjeu, de nombreuses entreprises se retrouvent débordées ou répondent de façon automatique avec des messages génériques qui détériorent leur image de marque."
+    },
+    "solution": {
+      "title": "Notre solution innovante",
+      "description": "Notre technologie d'IA avancée analyse en profondeur chaque avis client et génère des réponses personnalisées, pertinentes et humaines. Que ce soit pour remercier un client satisfait ou pour résoudre une situation délicate, notre système :",
+      "list": {
+        "item1": "Analyse le sentiment et le contexte de chaque avis",
+        "item2": "Identifie les points clés à adresser",
+        "item3": "Génère une réponse sur mesure qui reflète les valeurs de votre entreprise",
+        "item4": "Apprend et s'améliore continuellement grâce au machine learning"
+      }
+    },
+    "benefits": {
+      "title": "Les bénéfices pour votre entreprise",
+      "description": "En utilisant Reviu, vous transformez radicalement votre gestion de la réputation en ligne :",
+      "list": {
+        "item1": "Économisez jusqu'à 15 heures par semaine de travail manuel",
+        "item2": "Augmentez votre taux de satisfaction client de 37% en moyenne",
+        "item3": "Améliorez votre note globale Google de 0.8 point en moyenne",
+        "item4": "Transformez les clients mécontents en ambassadeurs de votre marque",
+        "item5": "Identifiez les tendances et obtenez des insights précieux sur vos points forts et vos axes d'amélioration"
+      }
+    },
+    "commitment": {
+      "title": "Notre engagement",
+      "description1": "Nous nous engageons à maintenir les plus hauts standards en matière de protection des données et d'éthique. Toutes vos données sont traitées conformément au RGPD, et vous gardez un contrôle total sur la façon dont notre IA interagit en votre nom.",
+      "description2": "Notre équipe de support client est disponible 7j/7 pour vous accompagner et s'assurer que vous tirez le meilleur parti de notre plateforme. Nous évoluons constamment, avec des mises à jour régulières pour intégrer les dernières avancées en matière d'IA et répondre aux besoins changeants du marché."
+    },
+    "conclusion": "Aucun apprentissage requis : connectez votre compte Google Business Profile, et laissez notre IA faire le reste."
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous",
+    "name": "Nom",
+    "email": "E-mail",
+    "subject": "Sujet",
+    "message": "Message",
+    "sendButton": "Envoyer",
+    "sendingButton": "Envoi en cours...",
+    "successMessage": "Votre message a été envoyé avec succès. Nous vous contacterons dès que possible.",
+    "emailQuestion": "Une question ? Écrivez-nous à :",
+    "errors": {
+      "timeout": "La connexion au serveur a pris trop de temps. Veuillez réessayer.",
+      "network": "Impossible de se connecter au serveur. Veuillez vérifier votre connexion internet et réessayer.",
+      "default": "Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer."
+    }
+  },
+  "footer": {
+    "copyright": " 2025 Reviu. Tous droits réservés.",
+    "terms": "Conditions d'utilisation",
+    "privacy": "Politique de confidentialité",
+    "cookies": "Cookies"
+  },
+  "dashboard": {
+    "title": "Tableau de bord",
+    "welcome": "Bienvenue sur votre tableau de bord",
+    "stats": "Statistiques",
+    "analytics": "Analyses",
+    "account": "Mon compte",
+    "settings": "Paramètres"
+  },
+  "cookies": {
+    "message": "Nous utilisons des cookies pour améliorer votre expérience sur notre site. En continuant à naviguer, vous acceptez notre utilisation des cookies.",
+    "accept": "Accepter",
+    "decline": "Refuser"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "items": [
+      {
+        "question": "Comment fonctionne Reviu exactement ?",
+        "answer": "Reviu utilise une intelligence artificielle avancée pour analyser les avis clients sur votre fiche Google Business et générer des réponses personnalisées et pertinentes. Après avoir connecté votre compte Google Business Profile à notre plateforme, notre système surveille automatiquement tous les nouveaux avis et y répond pour vous, 24h/24 et 7j/7."
+      },
+      {
+        "question": "Est-ce que je peux personnaliser les réponses générées par l'IA ?",
+        "answer": "Absolument ! Vous pouvez définir le ton de voix, le style de communication et même créer des modèles de réponses pour différents types d'avis. Notre IA s'adaptera à vos préférences tout en gardant les réponses naturelles et personnalisées pour chaque client."
+      },
+      {
+        "question": "Combien de temps faut-il pour mettre en place Reviu ?",
+        "answer": "La mise en place est extrêmement rapide, généralement moins de 5 minutes. Il vous suffit de connecter votre compte Google Business Profile, de définir quelques préférences de base, et le système est prêt à fonctionner. Pas besoin de formation technique ni d'intégration complexe."
+      },
+      {
+        "question": "Puis-je utiliser Reviu pour plusieurs établissements ?",
+        "answer": "Oui, nos forfaits Pro et Entreprise vous permettent de gérer plusieurs établissements depuis un seul tableau de bord. Vous pouvez appliquer des paramètres différents pour chaque établissement ou créer des règles communes."
+      },
+      {
+        "question": "Que se passe-t-il si je ne suis pas satisfait d'une réponse générée par l'IA ?",
+        "answer": "Vous avez un contrôle total sur les réponses. Vous recevez une notification pour chaque réponse générée et vous pouvez les modifier ou les supprimer à tout moment. Notre système apprend également de vos modifications pour améliorer les futures réponses."
+      },
+      {
+        "question": "Est-ce que Reviu peut m'aider à gérer les avis négatifs ?",
+        "answer": "Absolument. Notre IA est spécialement conçue pour traiter les avis négatifs avec tact et professionnalisme. Elle reconnaît les préoccupations spécifiques du client, présente des excuses appropriées, et propose des solutions concrètes. Pour les cas particulièrement sensibles, vous pouvez configurer le système pour vous alerter avant de publier la réponse."
+      },
+      {
+        "question": "Comment Reviu m'aide-t-il à améliorer mon référencement local ?",
+        "answer": "Google valorise les entreprises qui répondent activement à leurs avis. En utilisant Reviu pour répondre systématiquement et rapidement à tous vos avis, vous améliorez votre visibilité dans les résultats de recherche locaux. De plus, nos réponses personnalisées encouragent l'engagement des clients, ce qui est également un facteur positif pour votre référencement."
+      },
+      {
+        "question": "Quelles données puis-je obtenir grâce à Reviu ?",
+        "answer": "Notre tableau de bord vous fournit des analyses détaillées sur vos avis : tendances de satisfaction, problèmes récurrents, comparaison avec vos concurrents, impact de vos réponses sur les notes globales, et bien plus. Ces insights vous aident à identifier les points forts et les axes d'amélioration de votre entreprise."
+      },
+      {
+        "question": "Comment est calculé le tarif pour les grandes entreprises ?",
+        "answer": "Pour les grandes entreprises avec de multiples établissements, nous proposons des forfaits personnalisés basés sur le nombre de points de vente, le volume d'avis traités et les fonctionnalités spécifiques requises. Contactez notre équipe commerciale pour obtenir un devis adapté à vos besoins."
+      },
+      {
+        "question": "Y a-t-il un engagement de durée ?",
+        "answer": "Non, tous nos forfaits sont sans engagement. Vous êtes libre d'annuler votre abonnement à tout moment. Nous sommes confiants que vous constaterez rapidement la valeur ajoutée de notre service."
+      }
+    ]
+  },
+  "hero": {
+    "title": "Boostez la satisfaction client et le référencement sans lever le petit doigt",
+    "description": "Notre IA répond automatiquement aux avis laissés sur votre fiche Google Business, 24h/24, 7j/7.",
+    "ctaButton": "Commencer maintenant"
+  },
+  "quoteForm": {
+    "title": "Demande de devis personnalisé",
+    "description": "Veuillez remplir ce formulaire pour recevoir un devis adapté à vos besoins spécifiques. Notre équipe vous contactera sous 48 heures.",
+    "contactInfo": "Informations de contact",
+    "companyInfo": "Informations sur l'entreprise",
+    "projectInfo": "Informations sur votre projet",
+    "firstName": "Prénom",
+    "lastName": "Nom",
+    "email": "Email professionnel",
+    "phone": "Téléphone",
+    "companyName": "Nom de l'entreprise",
+    "country": "Pays",
+    "address": "Adresse",
+    "addressPlaceholder": "Rue et numéro",
+    "postalCode": "Code postal",
+    "city": "Ville",
+    "companyType": "Type d'entreprise",
+    "employees": "Nombre d'employés",
+    "employeesPlaceholder": "Ex: 42",
+    "budget": "Budget estimé",
+    "message": "Message / Besoins spécifiques",
+    "messagePlaceholder": "Décrivez vos besoins et attentes pour cette solution...",
+    "submit": "Soumettre la demande",
+    "submitting": "Envoi en cours...",
+    "cancel": "Annuler",
+    "close": "Fermer",
+    "successTitle": "Demande envoyée avec succès !",
+    "thankYou": "Merci pour votre demande !",
+    "successMessage": "Nous avons bien reçu votre demande de devis personnalisé. Un de nos conseillers va étudier votre dossier et vous contactera dans les 48 heures ouvrées pour discuter de vos besoins spécifiques et vous proposer une solution sur mesure.",
+    "errors": {
+      "required": "Ce champ est requis",
+      "emailInvalid": "Veuillez entrer une adresse email valide",
+      "phoneInvalid": "Veuillez entrer un numéro de téléphone valide",
+      "submission": "Une erreur est survenue lors de l'envoi du formulaire. Veuillez réessayer."
+    }
+  }
+}
