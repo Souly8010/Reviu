@@ -1,0 +1,276 @@
+{
+  "navbar": {
+    "features": "Functies",
+    "pricing": "Prijzen",
+    "stats": "Statistieken",
+    "about": "Over",
+    "contact": "Contact",
+    "login": "Inloggen",
+    "register": "Registreren",
+    "logout": "Uitloggen",
+    "dashboard": "Dashboard",
+    "tryFree": "Gratis proberen",
+    "backToHome": "Terug naar home",
+    "hello": "Hallo"
+  },
+  "languages": {
+    "fr": "Frans",
+    "en": "Engels",
+    "nl": "Nederlands"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "loginButton": "Inloggen",
+      "loginInProgress": "Bezig met inloggen...",
+      "noAccount": "Geen account?",
+      "registerLink": "Registreer",
+      "loginSuccess": "Succesvol ingelogd!",
+      "errors": {
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het inloggen. Probeer het opnieuw."
+      }
+    },
+    "register": {
+      "title": "Registreren",
+      "pseudo": "Gebruikersnaam",
+      "email": "Persoonlijk e-mail",
+      "password": "Wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "registerButton": "Registreren",
+      "registerInProgress": "Bezig met registreren...",
+      "alreadyAccount": "Al een account?",
+      "loginLink": "Inloggen",
+      "registerSuccess": "Succesvol geregistreerd!",
+      "phoneNumber": "Telefoonnummer",
+      "googleBusinessEmail": "Zakelijk Google Business e-mail",
+      "errors": {
+        "passwordMismatch": "Wachtwoorden komen niet overeen",
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het registreren. Probeer het opnieuw."
+      }
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord vergeten",
+      "email": "E-mail",
+      "resetButton": "Wachtwoord opnieuw instellen",
+      "resetInProgress": "Bezig met verzenden...",
+      "backToLogin": "Terug naar inloggen",
+      "successMessage": "Er is een e-mail voor het opnieuw instellen van uw wachtwoord verzonden.",
+      "errors": {
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het verzenden van de e-mail. Probeer het opnieuw."
+      }
+    },
+    "resetPassword": {
+      "title": "Wachtwoord opnieuw instellen",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "resetButton": "Wachtwoord wijzigen",
+      "resetInProgress": "Bezig met resetten...",
+      "backToLogin": "Terug naar inloggen",
+      "successMessage": "Uw wachtwoord is succesvol opnieuw ingesteld. U kunt nu inloggen met uw nieuwe wachtwoord.",
+      "errors": {
+        "passwordMismatch": "Wachtwoorden komen niet overeen",
+        "invalidToken": "De resetlink is ongeldig of verlopen.",
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het opnieuw instellen van het wachtwoord. Probeer het opnieuw."
+      }
+    }
+  },
+  "features": {
+    "title": "Functies",
+    "subtitle": "Ontdek wat ons platform voor u kan doen",
+    "feature1": {
+      "title": "Automatische antwoorden",
+      "description": "Onze AI reageert automatisch op beoordelingen op uw Google Business-profiel, 24/7."
+    },
+    "feature2": {
+      "title": "Personalisatie",
+      "description": "We hebben een kunstmatige intelligentie ontwikkeld met slimme algoritmen die Google-beoordelingen analyseren en automatisch beantwoorden met een aangepaste toon en boodschap."
+    },
+    "feature3": {
+      "title": "Audit en monitoring",
+      "description": "Aan het einde van elke maand ontvangt u een samenvatting van uw prestaties:",
+      "list": {
+        "item1": "Aantal ontvangen beoordelingen",
+        "item2": "Positief/negatief ratio",
+        "item3": "Klanteninteracties",
+        "item4": "Klantsuggesties",
+        "item5": "Eindscore"
+      },
+      "conclusion": "Toegang tot uw auditlogboek om al uw activiteiten te volgen."
+    },
+    "feature4": {
+      "title": "Meertalige AI",
+      "description": "Onze AI beheerst meer dan 50 talen en kan:",
+      "list": {
+        "item1": "De taal van de beoordeling automatisch detecteren",
+        "item2": "In dezelfde taal antwoorden",
+        "item3": "Culturele stijl aanpassen",
+        "item4": "Idiomatische uitdrukkingen beheren"
+      },
+      "conclusion": "Ideaal voor internationale bedrijven en toeristische gebieden."
+    },
+    "feature5": {
+      "title": "Realtime meldingen",
+      "description": "Zodra er een klacht wordt gedetecteerd op uw Google-profiel, ontvangt u direct een melding. De AI reageert automatisch terwijl u op de hoogte wordt gehouden."
+    },
+    "feature6": {
+      "title": "Slimme grafieken",
+      "description": "Bekijk de impact van de AI met dynamische grafieken: positieve/negatieve beoordelingen, responscijfers, rendement en meer, realtime bijgewerkt."
+    }
+  },
+  "pricing": {
+    "title": "Prijzen",
+    "subtitle": "Kies het plan dat bij uw behoeften past",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "switchToAnnual": "Overschakelen naar jaar",
+    "switchToMonthly": "Overschakelen naar maand",
+    "trial": {
+      "title": "Proefversie",
+      "description": "Gratis – Probeer alle functies 14 dagen uit, geen creditcard nodig.",
+      "button": "Gratis proberen"
+    },
+    "basic": {
+      "title": "Basis",
+      "price": "29€",
+      "period": "/maand",
+      "annualPrice": "290€",
+      "annualPeriod": "/jaar",
+      "description": "Toegang tot de belangrijkste functies",
+      "button": "Kies Basis"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "49€",
+      "period": "/maand",
+      "annualPrice": "490€",
+      "annualPeriod": "/jaar",
+      "description": "Alle functies",
+      "badge": "AANBEVOLEN",
+      "button": "Kies Pro"
+    },
+    "enterprise": {
+      "title": "Bedrijven / Franchises",
+      "description": "Op maat – Oplossing voor grote bedrijven",
+      "button": "Offerte aanvragen"
+    },
+    "alerts": {
+      "trialSuccess": "Gefeliciteerd! Uw 14-daagse proefperiode met Pro-toegang is geactiveerd.\n\nU heeft nu 2 weken toegang tot alle Pro-functies.",
+      "trialAlreadyUsed": "Sorry, u heeft uw gratis proefperiode al gebruikt.\n\nBekijk onze Pro-aanbiedingen om te blijven profiteren van alle functies!",
+      "trialError": "Uw proefperiode kan momenteel niet worden geactiveerd.\n\nReden: Serverfout\n\nOplossingen:\n• Controleer uw internetverbinding\n• Vernieuw de pagina\n• Neem contact op met onze support als het probleem aanhoudt",
+      "serverError": "Kan geen verbinding maken met de server.\n\nOplossingen:\n• Controleer uw internetverbinding\n• Zorg dat u bent ingelogd\n• Probeer het later opnieuw"
+    }
+  },
+  "stats": {
+    "title": "Statistieken",
+    "subtitle": "Onze kerncijfers",
+    "users": "Gebruikers",
+    "businesses": "Bedrijven",
+    "countries": "Landen",
+    "reviews": "Klantbeoordelingen",
+    "charts": {
+      "title": "Slimme statistieken",
+      "description": "Ontdek hoe onze AI presteert bij het analyseren van beoordelingen en het bieden van een hoog automatisch antwoordpercentage.",
+      "pieChart": {
+        "positiveReviews": "Positieve beoordelingen",
+        "negativeReviews": "Negatieve beoordelingen"
+      },
+      "lineChart": {
+        "yield": "Rendement (%)"
+      },
+      "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mrt",
+        "apr": "Apr",
+        "may": "Mei",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Okt",
+        "nov": "Nov",
+        "dec": "Dec"
+      }
+    }
+  },
+  "about": {
+    "title": "Over",
+    "subtitle": "Wie wij zijn",
+    "mission": {
+      "title": "Onze missie",
+      "description": "Bij <strong>Reviu</strong> zijn we gespecialiseerd in slimme Google-beoordelingsbeheer via ons AI-gedreven platform. Opgericht in 2025 door een gepassioneerd team van AI- en digitale marketingexperts, is onze missie om de manier waarop bedrijven online met hun klanten omgaan te transformeren."
+    },
+    "problem": {
+      "title": "Het probleem dat we oplossen",
+      "description1": "Beoordelingsbeheer is een cruciale uitdaging voor bedrijven, maar vaak een tijdrovende klus. 93% van de consumenten leest online beoordelingen voordat ze een aankoopbeslissing nemen, en 97% vindt dat het antwoord van een bedrijf op een beoordeling hun perceptie beïnvloedt.",
+      "description2": "Veel bedrijven raken hierdoor overbelast of reageren met generieke berichten die hun merkimago schaden."
+    },
+    "solution": {
+      "title": "Onze innovatieve oplossing",
+      "description": "Onze geavanceerde AI-technologie analyseert elke klantbeoordeling grondig en genereert gepersonaliseerde, relevante en menselijke antwoorden. Of het nu gaat om een tevreden klant of het oplossen van een probleem, ons systeem:",
+      "list": {
+        "item1": "Analyseert het sentiment en de context van elke beoordeling",
+        "item2": "Identificeert de belangrijkste punten",
+        "item3": "Genereert een op maat gemaakt antwoord dat de waarden van uw bedrijf weerspiegelt",
+        "item4": "Leert en verbetert voortdurend dankzij machine learning"
+      }
+    },
+    "benefits": {
+      "title": "Voordelen voor uw bedrijf",
+      "description": "Met Reviu transformeert u uw online reputatiebeheer radicaal:",
+      "list": {
+        "item1": "Bespaar tot 15 uur handmatig werk per week",
+        "item2": "Verhoog uw klanttevredenheid met gemiddeld 37%",
+        "item3": "Verbeter uw gemiddelde Google-score met 0,8 punt",
+        "item4": "Maak van ontevreden klanten ambassadeurs van uw merk",
+        "item5": "Identificeer trends en krijg waardevolle inzichten in uw sterke en verbeterpunten"
+      }
+    },
+    "commitment": {
+      "title": "Onze toewijding",
+      "description1": "Wij zetten ons in voor de hoogste normen op het gebied van gegevensbescherming en ethiek. Al uw gegevens worden verwerkt volgens de AVG, en u behoudt volledige controle over hoe onze AI namens u handelt.",
+      "description2": "Ons supportteam is 7 dagen per week beschikbaar om u te begeleiden en te zorgen dat u het meeste uit ons platform haalt. We blijven voortdurend verbeteren met regelmatige updates om de nieuwste AI-ontwikkelingen te integreren en in te spelen op veranderende marktbehoeften."
+    },
+    "conclusion": "Geen training vereist: koppel uw Google Business Profile-account en laat onze AI de rest doen."
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "Wij staan voor u klaar",
+    "name": "Naam",
+    "email": "E-mail",
+    "subject": "Onderwerp",
+    "message": "Bericht",
+    "sendButton": "Verzenden",
+    "sendingButton": "Bezig met verzenden...",
+    "successMessage": "Uw bericht is succesvol verzonden. Wij nemen zo spoedig mogelijk contact met u op.",
+    "emailQuestion": "Een vraag? Schrijf ons op:",
+    "errors": {
+      "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+      "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+      "default": "Er is een fout opgetreden bij het verzenden van het bericht. Probeer het opnieuw."
+    }
+  },
+  "footer": {
+    "copyright": " 2025 Reviu. Alle rechten voorbehouden.",
+    "terms": "Gebruiksvoorwaarden",
+    "privacy": "Privacybeleid",
+    "cookies": "Cookies"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom op uw dashboard",
+    "stats": "Statistieken",
+    "analytics": "Analyses"
+  }
+}

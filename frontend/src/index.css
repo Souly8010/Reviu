@@ -1,0 +1,640 @@
+/* CSS reset pour garantir la cohérence entre toutes les pages */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #0f0f0f;
+  color: #f3f4f6;
+  padding-top: 140px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+p {
+  line-height: 1.6;
+  color: #d1d5db;
+}
+
+/* Navigation styles améliorés - même taille et apparence sur toutes les pages */
+nav.main-nav {
+  background-color: #1e3a8a;
+  padding: 0;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  height: 120px; /* Hauteur fixe sur toutes les pages */
+  display: flex;
+  align-items: center;
+  min-height: 120px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  flex-wrap: nowrap;
+  padding: 0 20px;
+  height: 100%;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 120px;
+  width: 140px;
+  margin-left: 15px;
+}
+
+.navbar-nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  gap: 5px;
+  margin: 0 auto;
+  overflow-x: auto;
+  scrollbar-width: none; /* Pour Firefox */
+  -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+}
+
+.navbar-nav-items::-webkit-scrollbar {
+  display: none; /* Pour Chrome, Safari et Opera */
+}
+
+.nav-btn {
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
+  margin: 0 5px;
+  font-weight: 700;
+  transition: color 0.3s;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  padding: 6px 8px;
+  font-weight: bold;
+  white-space: nowrap;
+  min-width: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+}
+
+.nav-btn:hover {
+  color: #facc15;
+}
+
+.navbar-buttons {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+  gap: 5px;
+}
+
+.navbar-buttons .btn,
+.navbar-buttons .btn1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  min-width: auto;
+}
+
+.navbar-buttons a:last-child {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+}
+
+.navbar-buttons a:last-child:hover {
+  background-color: #0284c7;
+}
+
+.btn, .btn1 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 0 2px;
+  white-space: normal;
+  height: 36px;
+  min-height: 36px;
+}
+
+.btn {
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0284c7;
+}
+
+.btn1 {
+  background-color: #1e3a8a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background-color: #1e40af;
+}
+
+section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Boutons */
+/* Layout des fonctionnalités */
+.feature-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.feature-grid {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  flex-wrap: nowrap;
+  scrollbar-width: none;
+  padding: 10px 5px;
+}
+.feature-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.feature-grid > div:first-child {
+  margin-left: 0 !important;
+}
+
+/* Cartes uniformes */
+.feature-card,
+.feature-card2,
+.feature-card3,
+.feature-card4 {
+  flex: 0 0 480px;
+  max-width: 450px;
+  min-width: 450px;
+  background-color: #1e3a8a;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+  text-align: left;
+  margin-bottom: 15px;
+  margin-right: 5px;
+}
+
+.feature-card:hover,
+.feature-card2:hover,
+.feature-card3:hover,
+.feature-card4:hover {
+  transform: translateY(-5px);
+}
+
+/* Titre des cartes sur une ligne */
+.feature-card h3,
+.feature-card2 h3,
+.feature-card3 h3,
+.feature-card4 h3 {
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  margin-bottom: 25px;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+/* Flèches de scroll */
+.scroll-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: #0ea5e9;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 12px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+.scroll-btn:hover {
+  background-color: #0284c7;
+}
+.scroll-btn.left {
+  left: -20px;
+}
+.scroll-btn.right {
+  right: -20px;
+}
+
+/* Canvas */
+canvas {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #1e3a8a;
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav.main-nav {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  canvas#avisChart,
+  canvas#rendementChart {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .feature-card,
+  .feature-card2,
+  .feature-card3,
+  .feature-card4 {
+    padding: 20px;
+  }
+}
+
+/* Navigation bouton */
+.nav-btn {
+  text-decoration: none;
+  color: #f3f4f6;
+  margin: 0 15px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+.nav-btn:hover {
+  color: #facc15;
+}
+
+#pricingGrid .feature-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 230px; /* ajuste la hauteur si besoin */
+  text-align: center;
+}
+
+#pricingGrid .btn {
+  background-color: #0ea5e9;
+  margin-top: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Style pour le bouton Commencer maintenant */
+.cta-button {
+  margin-top: 25px;
+  padding: 12px 24px;
+  font-size: 1.1em;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-block;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 40px;
+}
+
+.cta-button:hover {
+  background-color: #0284c7;
+  transform: translateY(2px);
+}
+
+/* Amélioration des listes dans les cartes de fonctionnalités */
+.feature-card ul,
+.feature-card2 ul,
+.feature-card3 ul,
+.feature-card4 ul {
+  margin-left: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.feature-card li,
+.feature-card2 li,
+.feature-card3 li,
+.feature-card4 li {
+  margin-bottom: 8px;
+  color: #d1d5db;
+}
+
+/* Ajustement pour le badge PRO */
+.feature-card .pro-badge,
+.feature-card2 .pro-badge,
+.feature-card3 .pro-badge,
+.feature-card4 .pro-badge {
+  position: absolute;
+  top: -1px;
+  right: 0px;
+  background-color: #0ea5e9;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 8px 8px 8px 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Styles pour les pages d'authentification */
+.auth-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  margin-top: 60px;
+  min-height: calc(100vh - 180px);
+}
+
+.auth-section h1 {
+  color: #f3f4f6;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.auth-container {
+  background-color: #1f2937;
+  border-radius: 10px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #4b5563;
+  background-color: #374151;
+  color: #f3f4f6;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+.error-message {
+  color: #ef4444;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.auth-switch {
+  margin-top: 20px;
+  text-align: center;
+  color: #d1d5db;
+}
+
+.auth-switch a {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour la page d'inscription */
+.auth-section {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.auth-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  backdrop-filter: blur(10px);
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  color: #fff;
+  font-weight: 600;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #0ea5e9;
+}
+
+.auth-switch {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #fff;
+}
+
+.auth-switch a {
+  color: #0ea5e9;
+  text-decoration: none;
+}
+
+.auth-switch a:hover {
+  text-decoration: underline;
+}
+
+/* Styles pour la navigation d'authentification */
+.auth-nav {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-email {
+  color: #0ea5e9;
+  font-weight: 600;
+}
+
+.user-pseudo {
+  color: #fff;
+  font-weight: 600;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+/* Correction pour le bouton "Retour à l'accueil" */
+.navbar-buttons .btn {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0ea5e9;
+  color: white !important;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons .btn:hover {
+  background-color: #0284c7;
+}
+
+/* Style pour les boutons de navbar */
+.navbar-buttons a[href="/login"] {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-weight: 700;
+  transition: color 0.3s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.navbar-buttons a[href="/login"]:hover {
+  color: #facc15;
+  background-color: transparent;
+}
+
+/* Cette règle ne s'applique que sur les pages d'authentification */
+.navbar-buttons a.btn[href="/"]:not([href="/login"]) {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #0ea5e9;
+  color: white !important;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.navbar-buttons a.btn[href="/"]:hover:not([href="/login"]) {
+  background-color: #0284c7;
+}
+
+/* Style pour l'affichage du pseudo utilisateur */
+.user-info {
+  color: #ffffff;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 8px;
+  margin-right: 10px;
+  background-color: rgba(16, 185, 129, 0.2);
+  border: 1px solid #10b981;
+}
+
+.user-info span {
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+/* Style spécifique pour le bouton "Essayer gratuitement" */
+.navbar-buttons a.btn:last-child {
+  padding: 8px 20px;
+  min-width: 160px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}

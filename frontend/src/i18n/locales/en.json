@@ -1,0 +1,385 @@
+{
+  "navbar": {
+    "features": "Features",
+    "pricing": "Pricing",
+    "stats": "Statistics",
+    "about": "About",
+    "contact": "Contact",
+    "login": "Log in",
+    "register": "Register",
+    "logout": "Log out",
+    "dashboard": "Dashboard",
+    "tryFree": "Try for free",
+    "backToHome": "Back to home",
+    "hello": "Hello"
+  },
+  "languages": {
+    "fr": "French",
+    "en": "English",
+    "nl": "Dutch"
+  },
+  "auth": {
+    "login": {
+      "title": "Login",
+      "email": "Email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "loginButton": "Log in",
+      "loginInProgress": "Logging in...",
+      "noAccount": "No account?",
+      "registerLink": "Register",
+      "loginSuccess": "Login successful!",
+      "errors": {
+        "timeout": "Connection to the server took too long. Please try again.",
+        "network": "Unable to connect to the server. Please check your internet connection and try again.",
+        "default": "Error during login. Please try again."
+      }
+    },
+    "register": {
+      "title": "Register",
+      "pseudo": "Username",
+      "email": "Personal Email",
+      "password": "Password",
+      "confirmPassword": "Confirm Password",
+      "registerButton": "Register",
+      "registerInProgress": "Registering...",
+      "alreadyAccount": "Already have an account?",
+      "loginLink": "Log in",
+      "registerSuccess": "Registration successful!",
+      "phoneNumber": "Phone Number",
+      "googleBusinessEmail": "Google Business Professional Email",
+      "errors": {
+        "passwordMismatch": "Passwords do not match",
+        "timeout": "Connection to the server took too long. Please try again.",
+        "network": "Cannot connect to the server. Please check your internet connection and try again.",
+        "default": "Error during registration. Please try again."
+      }
+    },
+    "forgotPassword": {
+      "title": "Forgot Password",
+      "email": "Email",
+      "resetButton": "Reset Password",
+      "resetInProgress": "Sending...",
+      "backToLogin": "Back to login",
+      "successMessage": "A reset email has been sent to your email address.",
+      "errors": {
+        "timeout": "Connection to the server took too long. Please try again.",
+        "network": "Unable to connect to the server. Please check your internet connection and try again.",
+        "default": "Error sending the email. Please try again."
+      }
+    },
+    "resetPassword": {
+      "title": "Reset Password",
+      "newPassword": "New password",
+      "confirmPassword": "Confirm password",
+      "resetButton": "Change password",
+      "resetInProgress": "Resetting...",
+      "backToLogin": "Back to login",
+      "successMessage": "Your password has been successfully reset. You can now log in with your new password.",
+      "errors": {
+        "passwordMismatch": "Passwords do not match",
+        "invalidToken": "The reset link is invalid or has expired.",
+        "timeout": "Connection to the server took too long. Please try again.",
+        "network": "Unable to connect to the server. Please check your internet connection and try again.",
+        "default": "Error resetting the password. Please try again."
+      }
+    }
+  },
+  "features": {
+    "title": "Features",
+    "subtitle": "Discover what our platform can do for you",
+    "feature1": {
+      "title": "Automatic Responses",
+      "description": "Our AI automatically responds to reviews left on your Google Business profile, 24/7."
+    },
+    "feature2": {
+      "title": "Customization",
+      "description": "We've developed an artificial intelligence with smart algorithms capable of analyzing Google reviews and responding automatically, with an appropriate tone and message."
+    },
+    "feature3": {
+      "title": "Audit and Tracking",
+      "description": "At the end of each month, receive a summary of your performance:",
+      "list": {
+        "item1": "Number of reviews received",
+        "item2": "Positive/negative ratio",
+        "item3": "Customer interactions",
+        "item4": "Customer suggestions",
+        "item5": "Final score"
+      },
+      "conclusion": "Access your audit log to track all your activities."
+    },
+    "feature4": {
+      "title": "Multilingual AI",
+      "description": "Our artificial intelligence masters over 50 languages and can:",
+      "list": {
+        "item1": "Automatically detect the language of the review",
+        "item2": "Respond in the same language",
+        "item3": "Adapt the cultural style",
+        "item4": "Handle idiomatic expressions"
+      },
+      "conclusion": "Ideal for international businesses and tourist areas."
+    },
+    "feature5": {
+      "title": "Real-time Notifications",
+      "description": "As soon as a complaint is detected on your Google profile, you receive an instant alert. The AI handles responding automatically while you are informed."
+    },
+    "feature6": {
+      "title": "Smart Analytics",
+      "description": "Visualize the impact of the AI with dynamic charts: positive/negative reviews, response rate, performance, and more, updated in real-time."
+    }
+  },
+  "pricing": {
+    "title": "Pricing",
+    "subtitle": "Choose the plan that suits your needs",
+    "monthly": "Monthly",
+    "yearly": "Yearly",
+    "switchToAnnual": "Switch to yearly",
+    "switchToMonthly": "Switch to monthly",
+    "trial": {
+      "title": "Trial Version",
+      "description": "Free – Try all features for 14 days, no credit card required.",
+      "button": "Try for free"
+    },
+    "basic": {
+      "title": "Basic",
+      "price": "$29",
+      "period": "/month",
+      "annualPrice": "$290",
+      "annualPeriod": "/year",
+      "description": "Access to core features",
+      "button": "Choose Basic"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "$49",
+      "period": "/month",
+      "annualPrice": "$490",
+      "annualPeriod": "/year",
+      "description": "All features",
+      "badge": "RECOMMENDED",
+      "button": "Choose Pro"
+    },
+    "enterprise": {
+      "title": "Business / Franchise",
+      "description": "Custom pricing – Tailored solution for large businesses",
+      "button": "Request a quote"
+    },
+    "alerts": {
+      "trialSuccess": "Congratulations! Your 14-day trial with Pro access is activated.\n\nYou now have access to all Pro features for 2 weeks.",
+      "trialAlreadyUsed": "Sorry, you have already used your free trial period.\n\nCheck out our Pro offers to continue enjoying all the features!",
+      "trialError": "Unable to activate your trial period at this time.\n\nReason: Server connection error\n\nSolutions:\n• Check your internet connection\n• Refresh the page\n• Contact our support if the problem persists",
+      "serverError": "Unable to communicate with the server.\n\nSolutions:\n• Check your internet connection\n• Make sure you are logged in\n• Try again in a few moments"
+    }
+  },
+  "stats": {
+    "title": "Statistics",
+    "subtitle": "Our key figures",
+    "users": "Users",
+    "businesses": "Businesses",
+    "countries": "Countries",
+    "reviews": "Customer reviews",
+    "charts": {
+      "title": "Smart Statistics",
+      "description": "Discover how our AI performs by analyzing comments and ensuring a high yield of automatic responses.",
+      "pieChart": {
+        "positiveReviews": "Positive reviews",
+        "negativeReviews": "Negative reviews"
+      },
+      "lineChart": {
+        "yield": "Yield (%)"
+      },
+      "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Apr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dec"
+      }
+    }
+  },
+  "about": {
+    "title": "About",
+    "subtitle": "Who we are",
+    "mission": {
+      "title": "Our mission",
+      "description": "At <strong>Reviu</strong>, we specialize in intelligent management of <strong>Google reviews</strong> through our platform powered by cutting-edge artificial intelligence. Founded in 2025 by a passionate team of AI and digital marketing experts, our mission is to transform how businesses interact with their customers online."
+    },
+    "problem": {
+      "title": "The problem we solve",
+      "description1": "Customer review management has become crucial for all businesses, but it often represents a considerable workload. Studies show that 93% of consumers read online reviews before making a purchase decision, and 97% consider a company's response to a review influences their perception of it.",
+      "description2": "Faced with this challenge, many companies find themselves overwhelmed or respond automatically with generic messages that damage their brand image."
+    },
+    "solution": {
+      "title": "Our innovative solution",
+      "description": "Our advanced AI technology deeply analyzes each customer review and generates personalized, relevant, and human responses. Whether thanking a satisfied customer or resolving a delicate situation, our system:",
+      "list": {
+        "item1": "Analyzes the sentiment and context of each review",
+        "item2": "Identifies the key points to address",
+        "item3": "Generates a customized response that reflects your company's values",
+        "item4": "Learns and continuously improves through machine learning"
+      }
+    },
+    "benefits": {
+      "title": "Benefits for your business",
+      "description": "By using Reviu, you radically transform your online reputation management:",
+      "list": {
+        "item1": "Save up to 15 hours per week of manual work",
+        "item2": "Increase your customer satisfaction rate by 37% on average",
+        "item3": "Improve your overall Google rating by 0.8 points on average",
+        "item4": "Transform dissatisfied customers into brand ambassadors",
+        "item5": "Identify trends and gain valuable insights on your strengths and areas for improvement"
+      }
+    },
+    "commitment": {
+      "title": "Our commitment",
+      "description1": "We are committed to maintaining the highest standards in data protection and ethics. All your data is processed in accordance with GDPR, and you maintain complete control over how our AI interacts on your behalf.",
+      "description2": "Our customer support team is available 7 days a week to assist you and ensure you get the most out of our platform. We are constantly evolving, with regular updates to incorporate the latest advances in AI and respond to changing market needs."
+    },
+    "conclusion": "No learning required: connect your Google Business Profile account, and let our AI do the rest.",
+    "description": "We are a passionate team committed to providing the best services for your business. Our mission is to help you achieve your goals and grow your business.",
+    "team": {
+      "title": "Our Team",
+      "member1": {
+        "name": "John Smith",
+        "role": "CEO & Founder"
+      },
+      "member2": {
+        "name": "Mary Johnson",
+        "role": "Marketing Director"
+      },
+      "member3": {
+        "name": "Peter Wilson",
+        "role": "Technical Lead"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact us",
+    "subtitle": "We are here for you",
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "sendButton": "Send",
+    "sendingButton": "Sending...",
+    "successMessage": "Your message has been successfully sent. We will contact you as soon as possible.",
+    "emailQuestion": "Have a question? Write to us at:",
+    "errors": {
+      "timeout": "Connection to the server took too long. Please try again.",
+      "network": "Cannot connect to the server. Please check your internet connection and try again.",
+      "default": "An error occurred while sending the message. Please try again."
+    }
+  },
+  "footer": {
+    "copyright": " 2025 Reviu. All rights reserved.",
+    "terms": "Terms of Use",
+    "privacy": "Privacy Policy",
+    "cookies": "Cookies"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome to your dashboard",
+    "stats": "Statistics",
+    "analytics": "Analytics",
+    "account": "My Account",
+    "settings": "Settings"
+  },
+  "cookies": {
+    "message": "We use cookies to improve your experience on our site. By continuing to browse, you accept our use of cookies.",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": [
+      {
+        "question": "How exactly does Reviu work?",
+        "answer": "Reviu uses advanced artificial intelligence to analyze customer reviews on your Google Business listing and generate personalized and relevant responses. After connecting your Google Business Profile account to our platform, our system automatically monitors all new reviews and responds to them for you, 24/7."
+      },
+      {
+        "question": "Can I customize the responses generated by the AI?",
+        "answer": "Absolutely! You can define the tone of voice, communication style, and even create response templates for different types of reviews. Our AI will adapt to your preferences while keeping responses natural and personalized for each customer."
+      },
+      {
+        "question": "How long does it take to set up Reviu?",
+        "answer": "Setup is extremely quick, typically less than 5 minutes. Simply connect your Google Business Profile account, set a few basic preferences, and the system is ready to go. No technical training or complex integration needed."
+      },
+      {
+        "question": "Can I use Reviu for multiple establishments?",
+        "answer": "Yes, our Pro and Enterprise plans allow you to manage multiple establishments from a single dashboard. You can apply different settings for each establishment or create common rules."
+      },
+      {
+        "question": "What happens if I'm not satisfied with a response generated by the AI?",
+        "answer": "You have complete control over the responses. You receive a notification for each generated response and can modify or delete them at any time. Our system also learns from your modifications to improve future responses."
+      },
+      {
+        "question": "Can Reviu help me manage negative reviews?",
+        "answer": "Absolutely. Our AI is specially designed to handle negative reviews with tact and professionalism. It recognizes the specific concerns of the customer, offers appropriate apologies, and proposes concrete solutions. For particularly sensitive cases, you can configure the system to alert you before publishing the response."
+      },
+      {
+        "question": "How does Reviu help me improve my local SEO?",
+        "answer": "Google values businesses that actively respond to their reviews. By using Reviu to systematically and quickly respond to all your reviews, you improve your visibility in local search results. Additionally, our personalized responses encourage customer engagement, which is also a positive factor for your SEO."
+      },
+      {
+        "question": "What data can I obtain through Reviu?",
+        "answer": "Our dashboard provides you with detailed analyses of your reviews: satisfaction trends, recurring issues, comparison with your competitors, impact of your responses on overall ratings, and much more. These insights help you identify your business's strengths and areas for improvement."
+      },
+      {
+        "question": "How is the pricing calculated for large businesses?",
+        "answer": "For large businesses with multiple establishments, we offer customized plans based on the number of locations, the volume of reviews processed, and the specific features required. Contact our sales team to get a quote tailored to your needs."
+      },
+      {
+        "question": "Is there a long-term commitment?",
+        "answer": "No, all our plans are without commitment. You are free to cancel your subscription at any time. We are confident that you will quickly see the added value of our service."
+      }
+    ]
+  },
+  "hero": {
+    "title": "Boost customer satisfaction and SEO without lifting a finger",
+    "description": "Our AI automatically responds to reviews left on your Google Business listing, 24/7.",
+    "ctaButton": "Start now"
+  },
+  "quoteForm": {
+    "title": "Custom Quote Request",
+    "description": "Please fill out this form to receive a quote tailored to your specific needs. Our team will contact you within 48 hours.",
+    "contactInfo": "Contact Information",
+    "companyInfo": "Company Information",
+    "projectInfo": "Project Information",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Business Email",
+    "phone": "Phone Number",
+    "companyName": "Company Name",
+    "country": "Country",
+    "address": "Address",
+    "addressPlaceholder": "Street and number",
+    "postalCode": "Postal Code",
+    "city": "City",
+    "companyType": "Company Type",
+    "employees": "Number of Employees",
+    "employeesPlaceholder": "Ex: 42",
+    "budget": "Estimated Budget",
+    "message": "Message / Specific Needs",
+    "messagePlaceholder": "Describe your needs and expectations for this solution...",
+    "submit": "Submit Request",
+    "submitting": "Submitting...",
+    "cancel": "Cancel",
+    "close": "Close",
+    "successTitle": "Request Sent Successfully!",
+    "thankYou": "Thank you for your request!",
+    "successMessage": "We have received your custom quote request. One of our advisors will review your information and contact you within 48 business hours to discuss your specific needs and propose a tailored solution.",
+    "errors": {
+      "required": "This field is required",
+      "emailInvalid": "Please enter a valid email address",
+      "phoneInvalid": "Please enter a valid phone number",
+      "submission": "An error occurred while submitting the form. Please try again."
+    }
+  }
+}
