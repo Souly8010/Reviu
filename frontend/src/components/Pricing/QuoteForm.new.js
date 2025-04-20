@@ -202,16 +202,16 @@ const QuoteForm = ({ open, onClose }) => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  label={t('Nombres d \'enseignes')}
-                  name="etablissements"
+                  label={t('quoteForm.establishments')}
+                  name="establishments"
                   type="number"
-                  value={formData.etablissements}
+                  value={formData.establishments}
                   onChange={handleChange}
                   fullWidth
                   required
                   variant="outlined"
-                  error={!!errors.etablissements}
-                  helperText={errors.etablissements}
+                  error={!!errors.establishments}
+                  helperText={errors.establishments}
                   inputProps={{ min: 1 }}
                   InputLabelProps={{
                     style: { color: '#f3f4f6', fontSize: '1.1rem' }
@@ -239,14 +239,14 @@ const QuoteForm = ({ open, onClose }) => {
               </Grid>
               <Grid item xs={12} sm={6}>
                 <TextField
-                  label={t('Localisation')}
-                  name="Localisation"
-                  value={formData.Localisation}
+                  label={t('quoteForm.location')}
+                  name="location"
+                  value={formData.location}
                   onChange={handleChange}
                   fullWidth
                   required
                   variant="outlined"
-                  error={!!errors.Localisation}
+                  error={!!errors.location}
                   helperText={errors.location}
                   InputLabelProps={{
                     style: { color: '#f3f4f6', fontSize: '1.1rem' }
