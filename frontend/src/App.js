@@ -11,6 +11,10 @@ import Pricing from './components/Pricing/Pricing';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import FAQ from './components/FAQ/FAQ';
+import Privacy from './components/Privacy/Privacy';
+import Terms from './components/Legal/Terms';
+import LegalNotice from './components/Legal/LegalNotice';
+import CookiesPolicy from './components/Legal/CookiesPolicy';
 import Checkout from './components/Checkout/Checkout';
 import Dashboard from './components/Dashboard/Dashboard';
 import NewAudit from './components/Audit/NewAudit';
@@ -56,6 +60,10 @@ function App() {
           <Route path="/profile/notifications" element={<Dashboard />} />
           <Route path="/profile/privacy" element={<Dashboard />} />
           <Route path="/profile/delete" element={<Dashboard />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/legal" element={<LegalNotice />} />
+          <Route path="/cookies" element={<CookiesPolicy />} />
           <Route path="/" element={
             <>
               <section id="hero">
@@ -91,8 +99,43 @@ function App() {
               <About />
               <Contact />
 
-              <footer>
-                {t('footer.copyright')}
+              <footer style={{
+                padding: '40px 20px 20px',
+                backgroundColor: '#1e3a8a',
+                borderTop: '1px solid #1f2937'
+              }}>
+                <div style={{
+                  maxWidth: '1200px',
+                  margin: '0 auto',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  textAlign: 'center'
+                }}>
+                  <div style={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    gap: '20px',
+                    marginBottom: '20px',
+                    flexWrap: 'wrap'
+                  }}>
+                    <a href="/privacy" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                      {t('privacy.title', 'Charte de Confidentialité')}
+                    </a>
+                    <a href="/terms" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                      {t('footer.terms', 'Conditions d\'utilisation')}
+                    </a>
+                    <a href="/legal" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                      {t('footer.legal', 'Mentions Légales')}
+                    </a>
+                    <a href="/cookies" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                      {t('footer.cookies', 'Politique des Cookies')}
+                    </a>
+                  </div>
+                  <div style={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                    {t('footer.copyright')}
+                  </div>
+                </div>
               </footer>
             </>
           } />

@@ -1,0 +1,69 @@
+{
+  "privacy": {
+    "title": "Charte de Confidentialité",
+    "subtitle": "Dernière mise à jour : 20 avril 2025",
+    "introduction": "Chez Reviu, nous prenons très au sérieux la confidentialité de vos données personnelles. Cette charte de confidentialité explique comment nous collectons, utilisons, partageons et protégeons vos informations lorsque vous utilisez notre plateforme.",
+    "dataCollection": {
+      "title": "1. Collecte des données",
+      "content": "Nous collectons les informations suivantes lorsque vous utilisez notre plateforme :",
+      "item1": "Informations d'inscription : Nom, prénom, adresse e-mail, numéro de téléphone.",
+      "item2": "Informations d'entreprise : Nom de l'entreprise, nombre d'établissements, localisation.",
+      "item3": "Données d'utilisation : Informations sur la façon dont vous interagissez avec notre plateforme, y compris les fonctionnalités utilisées et le temps passé.",
+      "item4": "Informations techniques : Adresse IP, type de navigateur, appareil utilisé, pages visitées, date et heure d'accès."
+    },
+    "dataUse": {
+      "title": "2. Utilisation des données",
+      "content": "Nous utilisons vos données personnelles pour :",
+      "item1": "Fournir, maintenir et améliorer nos services.",
+      "item2": "Personnaliser votre expérience et vous offrir un contenu adapté à vos besoins.",
+      "item3": "Communiquer avec vous à propos des mises à jour, des offres spéciales ou d'autres informations relatives à nos services.",
+      "item4": "Analyser l'utilisation de notre plateforme pour améliorer nos services et développer de nouvelles fonctionnalités.",
+      "item5": "Protéger les droits, la propriété et la sécurité de notre plateforme et de nos utilisateurs."
+    },
+    "dataSharing": {
+      "title": "3. Partage des données",
+      "content": "Nous ne vendons pas vos informations personnelles à des tiers. Nous pouvons partager vos données dans les cas suivants :",
+      "item1": "Avec des prestataires de services qui nous aident à exploiter notre plateforme (hébergement, traitement des paiements, analyses, etc.).",
+      "item2": "Lorsque cela est requis par la loi, dans le cadre d'une procédure judiciaire ou pour protéger nos droits.",
+      "item3": "Dans le cadre d'une fusion, acquisition ou vente d'actifs, sous réserve que les informations personnelles restent protégées.",
+      "item4": "Avec votre consentement explicite ou à votre demande."
+    },
+    "cookies": {
+      "title": "4. Cookies et technologies similaires",
+      "content": "Nous utilisons des cookies et des technologies similaires pour améliorer votre expérience, comprendre comment notre plateforme est utilisée et vous offrir du contenu personnalisé. Vous pouvez contrôler l'utilisation des cookies via les paramètres de votre navigateur.",
+      "content2": "Nous utilisons différents types de cookies :",
+      "item1": "Cookies essentiels : nécessaires au fonctionnement de base de notre plateforme.",
+      "item2": "Cookies de préférences : permettent de mémoriser vos préférences et paramètres.",
+      "item3": "Cookies analytiques : nous aident à comprendre comment les utilisateurs interagissent avec notre plateforme.",
+      "item4": "Cookies marketing : utilisés pour vous montrer des publicités pertinentes sur d'autres sites web."
+    },
+    "security": {
+      "title": "5. Sécurité des données",
+      "content": "Nous mettons en œuvre des mesures de sécurité techniques et organisationnelles appropriées pour protéger vos données personnelles contre la perte, l'utilisation abusive, l'accès non autorisé, la divulgation ou la modification.",
+      "content2": "Ces mesures incluent le chiffrement des données, les contrôles d'accès, les pare-feu et les pratiques de développement sécurisées. Nous vérifions régulièrement nos systèmes pour détecter d'éventuelles vulnérabilités ou attaques."
+    },
+    "rights": {
+      "title": "6. Vos droits",
+      "content": "Selon votre juridiction, vous pouvez disposer des droits suivants concernant vos données personnelles :",
+      "content2": "Pour exercer l'un de ces droits, veuillez nous contacter à l'adresse mentionnée dans la section 'Contactez-nous' ci-dessous.",
+      "item1": "Droit d'accès : Vous pouvez demander une copie de vos données personnelles que nous détenons.",
+      "item2": "Droit de rectification : Vous pouvez nous demander de corriger ou de mettre à jour vos données personnelles inexactes ou incomplètes.",
+      "item3": "Droit à l'effacement : Vous pouvez nous demander de supprimer vos données personnelles dans certaines circonstances.",
+      "item4": "Droit à la limitation du traitement : Vous pouvez nous demander de limiter le traitement de vos données personnelles dans certaines circonstances.",
+      "item5": "Droit à la portabilité des données : Vous pouvez nous demander de transférer vos données personnelles à un autre fournisseur de services.",
+      "item6": "Droit d'opposition : Vous pouvez vous opposer au traitement de vos données personnelles dans certaines circonstances."
+    },
+    "changes": {
+      "title": "7. Modifications de la charte de confidentialité",
+      "content": "Nous pouvons mettre à jour cette charte de confidentialité de temps à autre pour refléter les changements dans nos pratiques ou pour d'autres raisons opérationnelles, légales ou réglementaires. Nous vous encourageons à la consulter régulièrement.",
+      "content2": "En cas de modifications importantes, nous vous en informerons par le biais d'un avis sur notre site web ou par e-mail avant que les modifications ne prennent effet."
+    },
+    "contact": {
+      "title": "8. Contactez-nous",
+      "content": "Si vous avez des questions ou des préoccupations concernant cette charte de confidentialité ou nos pratiques en matière de données, veuillez nous contacter à :",
+      "company": "Reviu",
+      "email": "Email : privacy@reviu.com",
+      "address": "Adresse : 123 Avenue de la Confidentialité, 75000 Paris, France"
+    }
+  }
+}

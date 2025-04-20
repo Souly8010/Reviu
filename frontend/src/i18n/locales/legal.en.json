@@ -1,0 +1,54 @@
+{
+  "legal": {
+    "title": "Legal Notice",
+    "subtitle": "Last updated: April 20, 2025",
+    
+    "companyInfo": {
+      "title": "1. Legal Information",
+      "content1": "The Reviu website is published by:",
+      "companyName": "Reviu SAS",
+      "address": "Registered office: 123 Republic Avenue, 75000 Paris, France",
+      "capital": "Share capital: €10,000",
+      "rcs": "RCS Paris B 123 456 789",
+      "vatNumber": "VAT number: FR 12 345 678 910",
+      "director": "Publication Director: John Smith",
+      "email": "Email: contact@reviu.com",
+      "phone": "Phone: +33 1 23 45 67 89"
+    },
+    
+    "hosting": {
+      "title": "2. Hosting",
+      "content": "The Reviu website is hosted by:",
+      "name": "OVH SAS",
+      "address": "Head office: 2 rue Kellermann - 59100 Roubaix - France",
+      "website": "Website: www.ovh.com"
+    },
+    
+    "intellectualProperty": {
+      "title": "3. Intellectual Property",
+      "content1": "All content on this site, including but not limited to graphics, images, text, videos, animations, sounds, logos, gifs and icons, as well as their formatting, are the exclusive property of Reviu except for trademarks, logos or content belonging to other partner companies or authors.",
+      "content2": "Any reproduction, distribution, modification, adaptation, retransmission or publication, even partial, of these different elements is strictly forbidden without the express written consent of Reviu. This representation or reproduction, by any process whatsoever, constitutes an infringement sanctioned by articles L.335-2 and following of the Intellectual Property Code."
+    },
+    
+    "personalData": {
+      "title": "4. Personal Data",
+      "content1": "The information collected on our site is subject to computer processing intended to improve your user experience and offer you personalized services.",
+      "content2": "In accordance with the French Data Protection Act of January 6, 1978, as amended, and the European Regulation No. 2016/679/EU of April 27, 2016, you have the right to access, rectify, transfer and delete your data or limit its processing.",
+      "content3": "You can exercise these rights by contacting us at: privacy@reviu.com",
+      "content4": "For more information on how we process your data, please consult our Privacy Policy."
+    },
+    
+    "links": {
+      "title": "5. Hyperlinks",
+      "content1": "The Reviu website may contain hyperlinks to other websites or other resources available on the Internet. Reviu has no means to control the sites connected to its website and is not responsible for the availability of such sites and external sources.",
+      "content2": "Reviu cannot be held responsible for any damage, of any nature whatsoever, resulting from the content of these sites or external sources, and in particular from the information, products or services they offer, or from any use that may be made of these elements."
+    },
+    
+    "contact": {
+      "title": "6. Contact",
+      "content": "For any questions about this site, please contact us at:",
+      "email": "Email: legal@reviu.com",
+      "address": "Postal address: 123 Republic Avenue, 75000 Paris, France"
+    }
+  }
+}

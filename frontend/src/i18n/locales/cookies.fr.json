@@ -1,0 +1,58 @@
+{
+  "cookies": {
+    "title": "Politique des Cookies",
+    "subtitle": "Dernière mise à jour : 20 avril 2025",
+    "introduction": "Chez Reviu, nous utilisons des cookies et autres technologies similaires pour améliorer votre expérience sur notre site et nos applications. Cette politique de cookies explique comment et pourquoi nous utilisons ces technologies et les choix qui s'offrent à vous.",
+    
+    "what": {
+      "title": "1. Qu'est-ce qu'un cookie ?",
+      "content": "Un cookie est un petit fichier texte qu'un site web sauvegarde sur votre ordinateur ou appareil mobile lorsque vous visitez ce site. Il permet au site de mémoriser vos actions et préférences (comme la langue, la taille de la police et d'autres paramètres d'affichage) pendant un certain temps, afin que vous n'ayez pas à les réindiquer à chaque fois que vous visitez le site ou naviguez d'une page à une autre."
+    },
+    
+    "types": {
+      "title": "2. Types de cookies que nous utilisons",
+      "content": "Nous utilisons différents types de cookies pour diverses raisons :",
+      "essential": "Cookies essentiels",
+      "essentialDesc": "Ces cookies sont nécessaires au fonctionnement du site. Ils vous permettent de naviguer sur le site et d'utiliser ses fonctionnalités, comme l'accès aux zones sécurisées. Sans ces cookies, les services que vous avez demandés, comme l'accès à votre compte, ne peuvent pas être fournis.",
+      "preferences": "Cookies de préférences",
+      "preferencesDesc": "Ces cookies permettent au site de mémoriser les choix que vous avez faits (comme votre nom d'utilisateur, votre langue ou la région où vous vous trouvez) et fournissent des fonctionnalités améliorées et plus personnalisées.",
+      "analytics": "Cookies statistiques",
+      "analyticsDesc": "Ces cookies recueillent des informations sur la façon dont vous utilisez un site web, par exemple quelles pages vous visitez le plus souvent et si vous recevez des messages d'erreur. Ils nous aident à comprendre comment les visiteurs interagissent avec le site, ce qui nous permet d'améliorer son fonctionnement.",
+      "marketing": "Cookies marketing",
+      "marketingDesc": "Ces cookies sont utilisés pour suivre les visiteurs sur les sites web. L'intention est d'afficher des publicités qui sont pertinentes et intéressantes pour l'utilisateur individuel et donc plus précieuses pour les éditeurs et les annonceurs tiers."
+    },
+    
+    "thirdParty": {
+      "title": "3. Cookies tiers",
+      "content1": "En plus de nos propres cookies, nous pouvons également utiliser diverses technologies tierces pour améliorer votre expérience et nos services. Ces technologies peuvent inclure :",
+      "item1": "Google Analytics pour nous aider à comprendre comment nos clients utilisent le site.",
+      "item2": "Des réseaux sociaux tels que Facebook et Twitter, qui peuvent utiliser des cookies sur notre site pour la personnalisation et la publicité.",
+      "item3": "Des partenaires publicitaires qui peuvent utiliser des cookies pour collecter des informations sur vos activités sur notre site et d'autres sites afin de vous fournir des publicités ciblées.",
+      "content2": "Ces services tiers ont leurs propres politiques de confidentialité et peuvent être amenés à utiliser les informations collectées pour leurs propres finalités."
+    },
+    
+    "control": {
+      "title": "4. Comment contrôler les cookies",
+      "content1": "Vous pouvez contrôler et/ou supprimer les cookies comme vous le souhaitez. Vous pouvez supprimer tous les cookies déjà présents sur votre appareil et vous pouvez configurer la plupart des navigateurs pour qu'ils les bloquent. Mais si vous faites cela, vous devrez peut-être ajuster manuellement certaines préférences chaque fois que vous visiterez un site, et certains services et fonctionnalités risquent de ne pas fonctionner.",
+      "content2": "Vous pouvez généralement modifier les paramètres de votre navigateur pour refuser les cookies. Voici comment faire dans différents navigateurs :",
+      "chrome": "Menu > Paramètres > Afficher les paramètres avancés > Confidentialité > Paramètres de contenu > Cookies",
+      "firefox": "Menu > Options > Vie privée et sécurité > Historique > Paramètres pour l'historique > Cookies",
+      "safari": "Préférences > Confidentialité > Cookies et données de site web",
+      "edge": "Menu > Paramètres > Paramètres avancés > Cookies"
+    },
+    
+    "updates": {
+      "title": "5. Mises à jour de notre politique de cookies",
+      "content": "Nous pouvons mettre à jour cette politique de cookies de temps à autre pour refléter, par exemple, les changements apportés aux cookies que nous utilisons ou pour d'autres raisons opérationnelles, légales ou réglementaires. Veuillez donc consulter régulièrement cette politique pour rester informé de notre utilisation des cookies et des technologies associées.",
+      "content2": "La date en haut de cette politique indique quand elle a été mise à jour pour la dernière fois."
+    },
+    
+    "contact": {
+      "title": "6. Contact",
+      "content": "Si vous avez des questions concernant notre utilisation des cookies ou d'autres technologies, veuillez nous contacter à :",
+      "company": "Reviu",
+      "email": "Email : privacy@reviu.com",
+      "address": "Adresse : 123 Avenue de la République, 75000 Paris, France"
+    }
+  }
+}

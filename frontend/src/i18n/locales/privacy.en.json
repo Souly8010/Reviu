@@ -1,0 +1,79 @@
+{
+  "privacy": {
+    "title": "Privacy Policy",
+    "subtitle": "Last updated: April 20, 2025",
+    "introduction": "At Reviu, we take the privacy of your personal data very seriously. This privacy policy explains how we collect, use, share, and protect your information when you use our platform.",
+    
+    "dataCollection": {
+      "title": "1. Data Collection",
+      "content": "We collect the following information when you use our platform:",
+      "item1": "Registration information: First name, last name, email address, phone number.",
+      "item2": "Profile information: Company name, industry, number of establishments.",
+      "item3": "Usage data: Information about how you use our platform, including pages visited, features used, and time spent.",
+      "item4": "Device information: IP address, browser type, operating system, and device identifiers.",
+      "item5": "Location data: General location information based on your IP address or more precise location if you grant permission.",
+      "item6": "Communications: Information you provide when contacting our support team or participating in surveys."
+    },
+    
+    "dataUse": {
+      "title": "2. Data Usage",
+      "content1": "We use the information we collect for the following purposes:",
+      "item1": "To provide and maintain our services.",
+      "item2": "To process your transactions and manage your account.",
+      "item3": "To improve and personalize your experience.",
+      "item4": "To communicate with you about your account, our services, and promotional offers.",
+      "item5": "To monitor and analyze usage patterns and trends.",
+      "item6": "To detect, prevent, and address technical issues, fraud, or illegal activities.",
+      "content2": "We process your data based on the performance of our contract with you, our legitimate interests in operating and improving our platform, and your consent where applicable."
+    },
+    
+    "dataSharing": {
+      "title": "3. Data Sharing",
+      "content": "We may share your information with the following categories of third parties:",
+      "item1": "Service providers who help us deliver our services (e.g., cloud hosting, payment processing).",
+      "item2": "Professional advisers such as lawyers, auditors, and insurers where necessary.",
+      "item3": "Regulatory authorities, law enforcement agencies, and other third parties when required by law.",
+      "item4": "Business partners with your consent or as necessary to provide services you've requested.",
+      "item5": "New owners in the event of a merger, acquisition, or sale of all or part of our business."
+    },
+    
+    "cookies": {
+      "title": "4. Cookies and Similar Technologies",
+      "content1": "We use cookies and similar tracking technologies to track activity on our platform and hold certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.",
+      "content2": "You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our service.",
+      "content3": "For more information about the cookies we use, please see our Cookie Policy."
+    },
+    
+    "dataSecurity": {
+      "title": "5. Data Security",
+      "content1": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.",
+      "content2": "Despite our best efforts, no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal data, we cannot guarantee its absolute security."
+    },
+    
+    "userRights": {
+      "title": "6. Your Rights",
+      "content": "Depending on your location, you may have the following rights regarding your personal data:",
+      "item1": "Access: The right to request copies of your personal data.",
+      "item2": "Rectification: The right to request that we correct inaccurate information about you.",
+      "item3": "Erasure: The right to request that we delete your personal data.",
+      "item4": "Restriction: The right to request that we restrict the processing of your personal data.",
+      "item5": "Data portability: The right to request that we transfer your personal data to another organization.",
+      "item6": "Objection: The right to object to our processing of your personal data.",
+      "content2": "To exercise any of these rights, please contact us using the information provided below."
+    },
+    
+    "policyChanges": {
+      "title": "7. Changes to This Policy",
+      "content1": "We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the 'Last updated' date.",
+      "content2": "You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page."
+    },
+    
+    "contact": {
+      "title": "8. Contact Us",
+      "content": "If you have any questions about this Privacy Policy, please contact us at:",
+      "company": "Reviu",
+      "email": "Email: privacy@reviu.com",
+      "address": "Address: 123 Privacy Avenue, 75000 Paris, France"
+    }
+  }
+}

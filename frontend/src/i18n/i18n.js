@@ -6,6 +6,16 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import fr from './locales/fr.json';
 import en from './locales/en.json';
 // import nl from './locales/nl.json';
+import privacyFr from './locales/privacy.fr.json';
+import termsFr from './locales/terms.fr.json';
+import legalFr from './locales/legal.fr.json';
+import cookiesFr from './locales/cookies.fr.json';
+
+// Import des fichiers de traduction anglais
+import privacyEn from './locales/privacy.en.json';
+import termsEn from './locales/terms.en.json';
+import legalEn from './locales/legal.en.json';
+import cookiesEn from './locales/cookies.en.json';
 
 
 // Configuration i18next
@@ -15,10 +25,10 @@ i18n
   .init({
     resources: {
       fr: {
-        translation: fr
+        translation: {...fr, ...privacyFr, ...termsFr, ...legalFr, ...cookiesFr}
       },
       en: {
-        translation: en
+        translation: {...en, ...privacyEn, ...termsEn, ...legalEn, ...cookiesEn}
       },
       // nl: {
       //   translation: nl
