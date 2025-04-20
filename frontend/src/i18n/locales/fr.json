@@ -142,18 +142,18 @@
     },
     "basic": {
       "title": "Basique",
-      "price": "29€",
+      "price": "69,99€ HTVA",
       "period": "/mois",
-      "annualPrice": "290€",
+      "annualPrice": "699,90€ HTVA",
       "annualPeriod": "/an",
       "description": "Accès aux fonctionnalités principales",
       "button": "Choisir Basique"
     },
     "pro": {
       "title": "Pro",
-      "price": "49€",
+      "price": "199,99€ HTVA",
       "period": "/mois",
-      "annualPrice": "490€",
+      "annualPrice": "1999,90€ HTVA",
       "annualPeriod": "/an",
       "description": "Toutes les fonctionnalités",
       "badge": "RECOMMANDÉ",

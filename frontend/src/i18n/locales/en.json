@@ -142,18 +142,18 @@
     },
     "basic": {
       "title": "Basic",
-      "price": "$29",
+      "price": "€69.99 excl. VAT",
       "period": "/month",
-      "annualPrice": "$290",
+      "annualPrice": "€699.90 excl. VAT",
       "annualPeriod": "/year",
       "description": "Access to core features",
       "button": "Choose Basic"
     },
     "pro": {
       "title": "Pro",
-      "price": "$49",
+      "price": "€199.99 excl. VAT",
       "period": "/month",
-      "annualPrice": "$490",
+      "annualPrice": "€1999.90 excl. VAT",
       "annualPeriod": "/year",
       "description": "All features",
       "badge": "RECOMMENDED",
