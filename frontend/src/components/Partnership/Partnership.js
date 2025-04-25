@@ -63,7 +63,7 @@ const Partnership = () => {
               fontWeight: 'light'
             }}
           >
-            Rejoignez notre réseau de partenaires et développez votre activité
+            {t('partnership.subtitle')}
           </Typography>
         </Box>
 
@@ -112,7 +112,7 @@ const Partnership = () => {
                 fontSize: { xs: '2rem', md: '3rem' }
               }}
             >
-              Coming Soon
+              {t('partnership.comingSoon')}
             </Typography>
             
             <Typography 
@@ -125,9 +125,7 @@ const Partnership = () => {
                 color: 'rgba(255, 255, 255, 0.85)'
               }}
             >
-              Notre programme de partenariat est en cours de développement et sera bientôt disponible. 
-              Restez à l'écoute pour découvrir comment vous pourrez collaborer avec nous et bénéficier 
-              d'avantages exclusifs.
+              {t('partnership.description')}
             </Typography>
             
             <Box 
@@ -161,7 +159,7 @@ const Partnership = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                Retour à l'accueil
+                {t('partnership.backToHome')}
               </Button>
               
               <Button 
@@ -185,7 +183,7 @@ const Partnership = () => {
                   transition: 'all 0.3s ease'
                 }}
               >
-                Nous contacter
+                {t('partnership.contactUs')}
               </Button>
             </Box>
           </Box>

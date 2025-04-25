@@ -1,0 +1,515 @@
+{
+  "navbar": {
+    "features": "Características",
+    "pricing": "Precios",
+    "stats": "Estadísticas",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "partnership": "Asociación",
+    "login": "Iniciar sesión",
+    "register": "Registrarse",
+    "logout": "Cerrar sesión",
+    "dashboard": "Panel de control",
+    "tryFree": "Prueba gratuita",
+    "backToHome": "Volver al inicio",
+    "hello": "Hola"
+  },
+  "languages": {
+    "fr": "Francés",
+    "en": "Inglés",
+    "es": "Español",
+    "nl": "Holandés"
+  },
+  "hero": {
+    "title": "Revoluciona tu servicio al cliente",
+    "description": "Reviu es la plataforma que te ayuda a mejorar la experiencia de tus clientes a través de reseñas generadas por IA. Consigue más reseñas positivas y gestiona tu reputación online de forma eficiente.",
+    "ctaButton": "Comenzar ahora"
+  },
+  "partnership": {
+    "title": "Nuestro programa de asociación",
+    "subtitle": "Únete a nuestra red de socios y haz crecer tu negocio",
+    "comingSoon": "Próximamente",
+    "description": "Nuestro programa de asociación está actualmente en desarrollo y estará disponible pronto. Mantente atento para descubrir cómo puedes colaborar con nosotros y beneficiarte de ventajas exclusivas.",
+    "backToHome": "Volver al inicio",
+    "contactUs": "Contáctanos"
+  },
+  "auth": {
+    "login": {
+      "title": "Iniciar sesión",
+      "email": "Correo electrónico",
+      "password": "Contraseña",
+      "forgotPassword": "¿Olvidó la contraseña?",
+      "loginButton": "Iniciar sesión",
+      "loginInProgress": "Iniciando sesión...",
+      "noAccount": "¿No tiene cuenta?",
+      "registerLink": "Registrarse",
+      "loginSuccess": "¡Inicio de sesión exitoso!",
+      "errors": {
+        "timeout": "La conexión con el servidor tardó demasiado tiempo. Por favor, inténtelo de nuevo.",
+        "network": "No se puede conectar al servidor. Por favor, compruebe su conexión a Internet e inténtelo de nuevo.",
+        "default": "Error durante el inicio de sesión. Por favor, inténtelo de nuevo."
+      }
+    },
+    "register": {
+      "title": "Registrarse",
+      "pseudo": "Nombre de usuario",
+      "email": "Correo electrónico personal",
+      "password": "Contraseña",
+      "confirmPassword": "Confirmar contraseña",
+      "registerButton": "Registrarse",
+      "registerInProgress": "Registrando...",
+      "alreadyAccount": "¿Ya tiene una cuenta?",
+      "loginLink": "Iniciar sesión",
+      "registerSuccess": "¡Registro exitoso!",
+      "phoneNumber": "Número de teléfono",
+      "googleBusinessEmail": "Correo electrónico profesional de Google Business",
+      "errors": {
+        "timeout": "La conexión con el servidor tardó demasiado tiempo. Por favor, inténtelo de nuevo.",
+        "network": "No se puede conectar al servidor. Por favor, compruebe su conexión a Internet e inténtelo de nuevo.",
+        "default": "Error durante el registro. Por favor, inténtelo de nuevo.",
+        "passwordMismatch": "Las contraseñas no coinciden",
+        "emailExists": "Este correo electrónico ya está registrado"
+      }
+    },
+    "forgotPassword": {
+      "title": "Restablecer contraseña",
+      "email": "Correo electrónico",
+      "resetButton": "Enviar enlace de restablecimiento",
+      "resetInProgress": "Enviando enlace...",
+      "backToLogin": "Volver al inicio de sesión",
+      "checkEmail": "Revise su correo electrónico",
+      "instructions": "Si existe una cuenta con ese correo electrónico, hemos enviado un enlace para restablecer su contraseña."
+    }
+  },
+  "dashboard": {
+    "welcome": "Bienvenido a su panel de control",
+    "quickStats": "Estadísticas rápidas",
+    "totalAudits": "Auditorías totales",
+    "avgScore": "Puntuación media",
+    "recentActivity": "Actividad reciente",
+    "viewAll": "Ver todo",
+    "tabs": {
+      "summary": "Resumen",
+      "audits": "Auditorías",
+      "notifications": "Notificaciones",
+      "account": "Cuenta"
+    },
+    "audit": {
+      "newAudit": "Nueva auditoría",
+      "startAudit": "Iniciar auditoría",
+      "auditInProgress": "Auditoría en progreso...",
+      "auditComplete": "Auditoría completada",
+      "viewReport": "Ver informe",
+      "noAudits": "Aún no tiene auditorías",
+      "createFirst": "Cree su primera auditoría",
+      "auditDate": "Fecha",
+      "auditScore": "Puntuación",
+      "auditStatus": "Estado",
+      "companyName": "Nombre de la empresa",
+      "description": "Descripción",
+      "placeholder": "Introduzca una breve descripción",
+      "status": {
+        "completed": "Completado",
+        "inProgress": "En progreso",
+        "scheduled": "Programado",
+        "failed": "Fallido"
+      }
+    },
+    "notifications": {
+      "noNotifications": "No tiene notificaciones",
+      "markAllRead": "Marcar todas como leídas",
+      "new": "Nuevo",
+      "earlier": "Anterior"
+    },
+    "account": {
+      "personalInfo": "Información personal",
+      "firstName": "Nombre",
+      "lastName": "Apellido",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "company": "Empresa",
+      "position": "Puesto",
+      "updateProfile": "Actualizar perfil",
+      "updateInProgress": "Actualizando...",
+      "changePassword": "Cambiar contraseña",
+      "currentPassword": "Contraseña actual",
+      "newPassword": "Nueva contraseña",
+      "confirmNewPassword": "Confirmar nueva contraseña",
+      "updatePassword": "Actualizar contraseña",
+      "subscription": "Suscripción",
+      "currentPlan": "Plan actual",
+      "validUntil": "Válido hasta",
+      "upgradePlan": "Mejorar plan",
+      "cancelSubscription": "Cancelar suscripción",
+      "dangerZone": "Zona de peligro",
+      "deleteAccount": "Eliminar cuenta",
+      "deleteWarning": "Esta acción no se puede deshacer. Se eliminarán permanentemente todos sus datos.",
+      "iUnderstand": "Entiendo las consecuencias, eliminar mi cuenta"
+    }
+  },
+  "features": {
+    "title": "Características",
+    "subtitle": "Descubra lo que Reviu puede hacer por su negocio",
+    "cards": {
+      "aiReviews": {
+        "title": "Reseñas generadas por IA",
+        "description": "Nuestro algoritmo de IA avanzado genera reseñas de alta calidad basadas en la experiencia real de sus clientes."
+      },
+      "reputation": {
+        "title": "Gestión de reputación",
+        "description": "Monitorice y gestione su reputación online en todas las plataformas principales desde un único panel de control."
+      },
+      "analytics": {
+        "title": "Análisis detallado",
+        "description": "Obtenga información valiosa sobre la satisfacción del cliente y las áreas de mejora con nuestros informes detallados."
+      },
+      "integration": {
+        "title": "Integración sencilla",
+        "description": "Conecte fácilmente con Google Business, TripAdvisor, Yelp y más para una gestión unificada."
+      }
+    },
+    "moreFeatures": "Más características",
+    "featureList": [
+      "Respuestas automáticas a reseñas",
+      "Alertas de reseñas negativas",
+      "Cuadros de mando personalizables",
+      "Comparación con competidores",
+      "Informes programados",
+      "Exportación de datos",
+      "Soporte multiidioma",
+      "Aplicación móvil"
+    ]
+  },
+  "pricing": {
+    "title": "Planes y precios",
+    "subtitle": "Elija el plan que mejor se adapte a sus necesidades",
+    "monthly": "Mensual",
+    "annual": "Anual",
+    "switchToAnnual": "Cambiar a plan anual y ahorrar un 20%",
+    "annualDiscount": "Ahorre un 20% con la facturación anual",
+    "plans": {
+      "starter": {
+        "title": "Inicial",
+        "price": "29",
+        "period": "/mes",
+        "description": "Perfecto para pequeñas empresas que están comenzando",
+        "features": [
+          "Hasta 100 reseñas generadas por IA al mes",
+          "Gestión de 3 ubicaciones",
+          "Análisis básico",
+          "Soporte por correo electrónico"
+        ],
+        "cta": "Comenzar ahora"
+      },
+      "professional": {
+        "title": "Profesional",
+        "price": "79",
+        "period": "/mes",
+        "description": "Ideal para empresas en crecimiento con múltiples ubicaciones",
+        "features": [
+          "Hasta 500 reseñas generadas por IA al mes",
+          "Gestión de 10 ubicaciones",
+          "Análisis avanzado con informes",
+          "Respuestas automáticas a reseñas",
+          "Soporte prioritario"
+        ],
+        "cta": "Comenzar ahora",
+        "popular": "Más popular"
+      },
+      "business": {
+        "title": "Empresa",
+        "price": "199",
+        "period": "/mes",
+        "description": "Para empresas con grandes necesidades de gestión de reputación",
+        "features": [
+          "Reseñas ilimitadas generadas por IA",
+          "Ubicaciones ilimitadas",
+          "Análisis premium y comparativa de competidores",
+          "API de integración personalizada",
+          "Gestor de cuenta dedicado",
+          "Soporte telefónico 24/7"
+        ],
+        "cta": "Contactar con ventas"
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes sobre precios",
+      "questions": [
+        {
+          "question": "¿Puedo cambiar de plan más adelante?",
+          "answer": "Sí, puede actualizar o degradar su plan en cualquier momento. Los cambios se aplican al siguiente ciclo de facturación."
+        },
+        {
+          "question": "¿Hay algún contrato de permanencia?",
+          "answer": "No, todos nuestros planes son sin compromiso. Puede cancelar en cualquier momento."
+        },
+        {
+          "question": "¿Qué métodos de pago aceptan?",
+          "answer": "Aceptamos todas las principales tarjetas de crédito (Visa, Mastercard, American Express) y PayPal."
+        }
+      ]
+    },
+    "enterprise": {
+      "title": "Plan Empresarial",
+      "description": "Soluciones personalizadas para grandes empresas con necesidades específicas",
+      "features": [
+        "Volumen personalizado de reseñas",
+        "Integración con sistemas existentes",
+        "Formación y soporte dedicado",
+        "SLA garantizado"
+      ],
+      "cta": "Solicitar información"
+    }
+  },
+  "about": {
+    "title": "Acerca de nosotros",
+    "subtitle": "Transformando la gestión de reseñas con inteligencia artificial",
+    "mission": {
+      "title": "Nuestra misión",
+      "description": "En Reviu, nuestra misión es ayudar a las empresas a aprovechar el poder de las reseñas de los clientes para impulsar su crecimiento. Creemos que cada interacción con los clientes es una oportunidad para mejorar y construir relaciones más sólidas."
+    },
+    "story": {
+      "title": "Nuestra historia",
+      "description": "Fundada en 2023 por un equipo de expertos en IA y marketing digital, Reviu nació de la idea de que las empresas necesitan una forma más inteligente de gestionar su reputación online. Lo que comenzó como un proyecto entre amigos se ha convertido en una plataforma utilizada por empresas de todo el mundo."
+    },
+    "values": {
+      "title": "Nuestros valores",
+      "innovation": {
+        "title": "Innovación",
+        "description": "Siempre buscamos nuevas formas de mejorar nuestra plataforma y ofrecer soluciones más inteligentes."
+      },
+      "integrity": {
+        "title": "Integridad",
+        "description": "Actuamos con honestidad y transparencia en todo lo que hacemos."
+      },
+      "customerFocus": {
+        "title": "Enfoque en el cliente",
+        "description": "El éxito de nuestros clientes es nuestro éxito. Trabajamos incansablemente para superar sus expectativas."
+      },
+      "excellence": {
+        "title": "Excelencia",
+        "description": "Nos esforzamos por alcanzar los más altos estándares en nuestros productos y servicios."
+      }
+    },
+    "team": {
+      "title": "Nuestro equipo",
+      "description": "Un grupo diverso de profesionales apasionados por la innovación y el servicio al cliente.",
+      "members": [
+        {
+          "name": "Elena Martínez",
+          "position": "Fundadora y CEO",
+          "bio": "Con más de 15 años de experiencia en tecnología y marketing digital, Elena lidera la visión estratégica de Reviu."
+        },
+        {
+          "name": "Javier López",
+          "position": "CTO",
+          "bio": "Experto en IA y aprendizaje automático, Javier supervisa el desarrollo de nuestros algoritmos avanzados."
+        },
+        {
+          "name": "Sophie Dubois",
+          "position": "Directora de Operaciones",
+          "bio": "Sophie garantiza que nuestros procesos y servicios funcionen sin problemas para proporcionar la mejor experiencia al cliente."
+        },
+        {
+          "name": "Marco Rossi",
+          "position": "Director de Marketing",
+          "bio": "Con su experiencia en marketing digital, Marco ayuda a las empresas a comprender cómo Reviu puede transformar su negocio."
+        }
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contacto",
+    "subtitle": "Estamos aquí para ayudarle",
+    "getInTouch": "Póngase en contacto",
+    "ourOffice": "Nuestra oficina",
+    "address": "123 Calle Principal, 28001 Madrid, España",
+    "email": "info@reviu.com",
+    "phone": "+34 91 123 45 67",
+    "hours": "Lunes a Viernes, 9:00 - 18:00",
+    "form": {
+      "name": "Nombre completo",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "send": "Enviar mensaje",
+      "sending": "Enviando...",
+      "success": "Mensaje enviado con éxito",
+      "error": "Error al enviar el mensaje",
+      "placeholders": {
+        "name": "Introduzca su nombre completo",
+        "email": "Introduzca su correo electrónico",
+        "subject": "¿Sobre qué quiere hablar?",
+        "message": "Escriba su mensaje aquí..."
+      }
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "description": "Encuentre respuestas a las preguntas más comunes",
+      "viewAll": "Ver todas las preguntas"
+    },
+    "map": {
+      "title": "Encuéntrenos",
+      "directions": "Obtener indicaciones"
+    },
+    "departments": {
+      "sales": {
+        "title": "Ventas",
+        "description": "¿Interesado en nuestros productos? Nuestro equipo de ventas está listo para ayudarle.",
+        "email": "ventas@reviu.com",
+        "phone": "+34 91 123 45 68"
+      },
+      "support": {
+        "title": "Soporte",
+        "description": "¿Necesita ayuda con Reviu? Nuestro equipo de soporte está disponible para asistirle.",
+        "email": "soporte@reviu.com",
+        "phone": "+34 91 123 45 69"
+      },
+      "press": {
+        "title": "Prensa",
+        "description": "Para consultas de medios, por favor contacte con nuestro departamento de comunicación.",
+        "email": "prensa@reviu.com",
+        "phone": "+34 91 123 45 70"
+      }
+    }
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Respuestas a las preguntas más comunes",
+    "searchPlaceholder": "Buscar pregunta...",
+    "noResults": "No se encontraron resultados para su búsqueda",
+    "categories": {
+      "general": "General",
+      "account": "Cuenta",
+      "features": "Características",
+      "pricing": "Precios",
+      "technical": "Técnico"
+    },
+    "items": [
+      {
+        "question": "¿Cómo funciona exactamente Reviu?",
+        "answer": "Reviu utiliza algoritmos de inteligencia artificial para analizar las experiencias de sus clientes y generar reseñas auténticas. Nuestro sistema también le ayuda a gestionar y responder a estas reseñas en todas las plataformas relevantes desde un único panel de control."
+      },
+      {
+        "question": "¿Es legal utilizar IA para generar reseñas?",
+        "answer": "Sí, completamente. Nuestro sistema no crea reseñas falsas, sino que ayuda a los clientes reales a articular sus experiencias. Todas las reseñas están basadas en interacciones genuinas y cumplen con las directrices de las plataformas."
+      },
+      {
+        "question": "¿Cuánto tiempo se tarda en ver resultados?",
+        "answer": "La mayoría de nuestros clientes comienzan a ver un aumento en la cantidad y calidad de las reseñas en las primeras 2-4 semanas. Los resultados en términos de mejora de reputación y aumento de ingresos suelen ser visibles después de 2-3 meses de uso consistente."
+      },
+      {
+        "question": "¿Con qué plataformas de reseñas se integra Reviu?",
+        "answer": "Reviu se integra con todas las principales plataformas, incluyendo Google Business, Facebook, TripAdvisor, Yelp, Trustpilot, y muchas más específicas de cada sector."
+      },
+      {
+        "question": "¿Puedo probar Reviu antes de comprometerme?",
+        "answer": "¡Por supuesto! Ofrecemos una prueba gratuita de 14 días con todas las funcionalidades, sin necesidad de introducir datos de pago. Así puede comprobar el valor que Reviu aporta a su negocio."
+      },
+      {
+        "question": "¿Cómo factura Reviu?",
+        "answer": "Ofrecemos planes de suscripción mensuales y anuales. La facturación se realiza al inicio de cada período y aceptamos todas las principales tarjetas de crédito y PayPal."
+      },
+      {
+        "question": "¿Cómo es el soporte técnico?",
+        "answer": "Nuestro equipo de soporte está disponible de lunes a viernes, de 9:00 a 18:00 (hora de Madrid). Los clientes de planes Premium y Business disponen de soporte prioritario y canales adicionales de atención."
+      },
+      {
+        "question": "¿Reviu mejora realmente mis reseñas?",
+        "answer": "Sí. Nuestros datos muestran que los negocios que utilizan Reviu experimentan un aumento del 35% en reseñas positivas y una mejora del 28% en su puntuación media online tras 3 meses de uso."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Estadísticas",
+    "subtitle": "Descubra el impacto de Reviu",
+    "businesses": "Empresas utilizando Reviu",
+    "reviews": "Reseñas gestionadas",
+    "satisfied": "Clientes satisfechos",
+    "countries": "Países",
+    "chart": {
+      "title": "Crecimiento de reseñas positivas",
+      "positive": "Reseñas positivas",
+      "negative": "Reseñas negativas",
+      "timeline": "Línea temporal"
+    },
+    "intelligentStats": "Estadísticas inteligentes",
+    "revenueGrowth": "Crecimiento de ingresos",
+    "customerSatisfaction": "Satisfacción del cliente",
+    "conversionRate": "Tasa de conversión",
+    "marketShare": "Cuota de mercado",
+    "competitorAnalysis": "Análisis de competidores",
+    "charts": {
+      "title": "Gráficos estadísticos",
+      "description": "Visualización detallada de sus datos",
+      "pieChart": {
+        "positiveReviews": "Reseñas positivas",
+        "negativeReviews": "Reseñas negativas",
+        "title": "Distribución de reseñas"
+      },
+      "lineChart": {
+        "yield": "Rendimiento",
+        "growth": "Crecimiento",
+        "title": "Evolución del rendimiento"
+      },
+      "months": {
+        "jan": "Ene",
+        "feb": "Feb",
+        "mar": "Mar",
+        "apr": "Abr",
+        "may": "May",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Ago",
+        "sep": "Sep",
+        "oct": "Oct",
+        "nov": "Nov",
+        "dec": "Dic"
+      }
+    },
+    "testimonials": {
+      "title": "Lo que dicen nuestros clientes",
+      "cta": "Ver más testimonios"
+    }
+  },
+  "footer": {
+    "company": "Empresa",
+    "about": "Sobre nosotros",
+    "careers": "Empleo",
+    "blog": "Blog",
+    "press": "Prensa",
+    "resources": "Recursos",
+    "documentation": "Documentación",
+    "help": "Ayuda y soporte",
+    "tutorials": "Tutoriales",
+    "api": "API",
+    "statusPage": "Estado del servicio",
+    "legal": "Menciones legales",
+    "terms": "Términos y condiciones",
+    "privacy": "Política de privacidad",
+    "cookies": "Política de cookies",
+    "legalNotice": "Aviso legal",
+    "contact": "Contacto",
+    "sales": "Ventas",
+    "support": "Soporte",
+    "partnership": "Asociaciones",
+    "address": "Dirección",
+    "phone": "Teléfono",
+    "email": "Email",
+    "officeHours": "Horario de oficina",
+    "location": "Ubicación",
+    "visitUs": "Visítenos",
+    "callUs": "Llámenos",
+    "emailUs": "Envíenos un correo",
+    "copyright": "© 2025 Reviu. Todos los derechos reservados.",
+    "madeWith": "Hecho con",
+    "newsletter": {
+      "title": "Suscríbase a nuestro boletín",
+      "placeholder": "Su correo electrónico",
+      "button": "Suscribirse",
+      "success": "Gracias por suscribirse",
+      "error": "Error al suscribirse"
+    },
+    "social": "Síganos en"
+  }
+}

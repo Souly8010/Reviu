@@ -1,0 +1,510 @@
+{
+  "navbar": {
+    "features": "Functies",
+    "pricing": "Prijzen",
+    "stats": "Statistieken",
+    "about": "Over ons",
+    "contact": "Contact",
+    "partnership": "Partnerschap",
+    "login": "Inloggen",
+    "register": "Registreren",
+    "logout": "Uitloggen",
+    "dashboard": "Dashboard",
+    "tryFree": "Gratis uitproberen",
+    "backToHome": "Terug naar home",
+    "hello": "Hallo"
+  },
+  "languages": {
+    "fr": "Frans",
+    "en": "Engels",
+    "es": "Spaans",
+    "nl": "Nederlands"
+  },
+  "auth": {
+    "login": {
+      "title": "Inloggen",
+      "email": "E-mail",
+      "password": "Wachtwoord",
+      "forgotPassword": "Wachtwoord vergeten?",
+      "loginButton": "Inloggen",
+      "loginInProgress": "Bezig met inloggen...",
+      "noAccount": "Geen account?",
+      "registerLink": "Registreer nu",
+      "loginSuccess": "Succesvol ingelogd!",
+      "errors": {
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het inloggen. Probeer het opnieuw."
+      }
+    },
+    "register": {
+      "title": "Registreren",
+      "pseudo": "Gebruikersnaam",
+      "email": "Persoonlijke e-mail",
+      "password": "Wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "registerButton": "Registreren",
+      "registerInProgress": "Bezig met registreren...",
+      "alreadyAccount": "Al een account?",
+      "loginLink": "Inloggen",
+      "registerSuccess": "Registratie succesvol!",
+      "phoneNumber": "Telefoonnummer",
+      "googleBusinessEmail": "Google Business e-mail",
+      "errors": {
+        "passwordMismatch": "Wachtwoorden komen niet overeen",
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij de registratie. Probeer het opnieuw."
+      }
+    },
+    "forgotPassword": {
+      "title": "Wachtwoord vergeten",
+      "email": "E-mail",
+      "resetButton": "Wachtwoord resetten",
+      "resetInProgress": "Bezig met verzenden...",
+      "backToLogin": "Terug naar inloggen",
+      "successMessage": "Een reset-e-mail is verzonden naar uw e-mailadres.",
+      "errors": {
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het verzenden van de e-mail. Probeer het opnieuw."
+      }
+    },
+    "resetPassword": {
+      "title": "Wachtwoord resetten",
+      "newPassword": "Nieuw wachtwoord",
+      "confirmPassword": "Bevestig wachtwoord",
+      "resetButton": "Wachtwoord wijzigen",
+      "resetInProgress": "Bezig met resetten...",
+      "backToLogin": "Terug naar inloggen",
+      "successMessage": "Uw wachtwoord is succesvol gereset. U kunt nu inloggen met uw nieuwe wachtwoord.",
+      "errors": {
+        "passwordMismatch": "Wachtwoorden komen niet overeen",
+        "invalidToken": "De resetlink is ongeldig of verlopen.",
+        "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+        "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+        "default": "Fout bij het resetten van het wachtwoord. Probeer het opnieuw."
+      }
+    }
+  },
+  "features": {
+    "title": "Functies",
+    "subtitle": "Ontdek wat ons platform voor u kan doen",
+    "feature1": {
+      "title": "Automatische antwoorden",
+      "description": "Onze AI beantwoordt automatisch de recensies op uw Google Business-pagina, 24 uur per dag, 7 dagen per week."
+    },
+    "feature2": {
+      "title": "Personalisatie",
+      "description": "We hebben kunstmatige intelligentie ontwikkeld met slimme algoritmen die Google-recensies kunnen analyseren en automatisch beantwoorden, met een aangepaste toon en boodschap."
+    },
+    "feature3": {
+      "title": "Audit en monitoring",
+      "description": "Aan het einde van elke maand ontvangt u een samenvatting van uw prestaties:",
+      "list": {
+        "item1": "Aantal ontvangen recensies",
+        "item2": "Verhouding positief/negatief",
+        "item3": "Klantinteracties",
+        "item4": "Klantsuggesties",
+        "item5": "Eindscore"
+      },
+      "conclusion": "Toegang tot uw auditlogboek om al uw activiteiten te volgen."
+    },
+    "feature4": {
+      "title": "Meertalige AI",
+      "description": "Onze kunstmatige intelligentie beheerst meer dan 50 talen en kan:",
+      "list": {
+        "item1": "De taal van de recensie automatisch detecteren",
+        "item2": "Antwoorden in dezelfde taal",
+        "item3": "De culturele stijl aanpassen",
+        "item4": "Idiomatische uitdrukkingen beheren"
+      },
+      "conclusion": "Ideaal voor internationale bedrijven en toeristische gebieden."
+    },
+    "feature5": {
+      "title": "Realtime meldingen",
+      "description": "Zodra een klacht wordt gedetecteerd op uw Google-pagina, ontvangt u een onmiddellijke waarschuwing. De AI zorgt voor een automatisch antwoord terwijl u op de hoogte wordt gehouden."
+    },
+    "feature6": {
+      "title": "Intelligente grafieken",
+      "description": "Visualiseer de impact van AI met dynamische grafieken: positieve/negatieve recensies, responspercentage, rendement en meer, allemaal bijgewerkt in realtime."
+    }
+  },
+  "pricing": {
+    "title": "Prijzen",
+    "subtitle": "Kies het plan dat bij uw behoeften past",
+    "monthly": "Maandelijks",
+    "yearly": "Jaarlijks",
+    "switchToAnnual": "Overschakelen naar jaarlijks",
+    "switchToMonthly": "Overschakelen naar maandelijks",
+    "trial": {
+      "title": "Proefversie",
+      "description": "Gratis - Probeer alle functies 14 dagen, zonder creditcard.",
+      "button": "Gratis uitproberen"
+    },
+    "basic": {
+      "title": "Basis",
+      "price": "69,99€ excl. BTW",
+      "period": "/maand",
+      "annualPrice": "699,90€ excl. BTW",
+      "annualPeriod": "/jaar",
+      "description": "Toegang tot de belangrijkste functies",
+      "button": "Kies Basis"
+    },
+    "pro": {
+      "title": "Pro",
+      "price": "199,99€ excl. BTW",
+      "period": "/maand",
+      "annualPrice": "1999,90€ excl. BTW",
+      "annualPeriod": "/jaar",
+      "description": "Alle functies",
+      "badge": "AANBEVOLEN",
+      "button": "Kies Pro"
+    },
+    "enterprise": {
+      "title": "Bedrijven / Franchises",
+      "description": "Op maat - Gepersonaliseerde oplossing voor grote bedrijven",
+      "button": "Offerte aanvragen"
+    },
+    "alerts": {
+      "trialSuccess": "Gefeliciteerd! Uw 14-daagse proefperiode met Pro-toegang is geactiveerd.\n\nU heeft nu 2 weken toegang tot alle Pro-functies.",
+      "trialAlreadyUsed": "Sorry, u heeft uw gratis proefperiode al gebruikt.\n\nOntdek onze Pro-aanbiedingen om te blijven genieten van alle functies!",
+      "trialError": "Kan uw proefperiode momenteel niet activeren.\n\nReden: Serverfout\n\nOplossingen:\n• Controleer uw internetverbinding\n• Vernieuw de pagina\n• Neem contact op met onze support als het probleem aanhoudt",
+      "serverError": "Kan niet communiceren met de server.\n\nOplossingen:\n• Controleer uw internetverbinding\n• Zorg ervoor dat u correct bent ingelogd\n• Probeer het over enkele momenten opnieuw"
+    }
+  },
+  "stats": {
+    "title": "Statistieken",
+    "subtitle": "Onze belangrijkste cijfers",
+    "users": "Gebruikers",
+    "businesses": "Bedrijven",
+    "countries": "Landen",
+    "reviews": "Klantbeoordelingen",
+    "charts": {
+      "title": "Intelligente statistieken",
+      "description": "Ontdek hoe onze AI presteert bij het analyseren van beoordelingen en het garanderen van een hoog rendement van automatische reacties.",
+      "pieChart": {
+        "positiveReviews": "Positieve beoordelingen",
+        "negativeReviews": "Negatieve beoordelingen"
+      },
+      "lineChart": {
+        "yield": "Rendement (%)"
+      },
+      "months": {
+        "jan": "Jan",
+        "feb": "Feb",
+        "mar": "Mrt",
+        "apr": "Apr",
+        "may": "Mei",
+        "jun": "Jun",
+        "jul": "Jul",
+        "aug": "Aug",
+        "sep": "Sep",
+        "oct": "Okt",
+        "nov": "Nov",
+        "dec": "Dec"
+      }
+    }
+  },
+  "about": {
+    "title": "Over ons",
+    "subtitle": "Wie wij zijn",
+    "mission": {
+      "title": "Onze missie",
+      "description": "Bij <strong>Reviu</strong> zijn we gespecialiseerd in het intelligent beheren van <strong>Google-recensies</strong> via ons platform dat wordt aangedreven door geavanceerde kunstmatige intelligentie. Opgericht in 2025 door een gepassioneerd team van AI- en digitale marketingexperts, is onze missie om de manier waarop bedrijven online met hun klanten communiceren te transformeren."
+    },
+    "problem": {
+      "title": "Het probleem dat we oplossen",
+      "description1": "Het beheren van klantrecensies is een cruciale uitdaging geworden voor alle bedrijven, maar het vertegenwoordigt vaak een aanzienlijke werklast. Onderzoek toont aan dat 93% van de consumenten online recensies leest voordat ze een aankoopbeslissing nemen, en 97% vindt dat de reactie van een bedrijf op een recensie hun perceptie van dat bedrijf beïnvloedt.",
+      "description2": "Geconfronteerd met deze uitdaging raken veel bedrijven overweldigd of reageren ze automatisch met generieke berichten die hun merkimago schaden."
+    },
+    "solution": {
+      "title": "Onze innovatieve oplossing",
+      "description": "Onze geavanceerde AI-technologie analyseert elke klantrecensie diepgaand en genereert gepersonaliseerde, relevante en menselijke reacties. Of het nu gaat om het bedanken van een tevreden klant of het oplossen van een delicate situatie, ons systeem:",
+      "list": {
+        "item1": "Analyseert het sentiment en de context van elke recensie",
+        "item2": "Identificeert de belangrijkste punten om aan te pakken",
+        "item3": "Genereert een op maat gemaakte reactie die de waarden van uw bedrijf weerspiegelt",
+        "item4": "Leert en verbetert continu dankzij machine learning"
+      }
+    },
+    "benefits": {
+      "title": "De voordelen voor uw bedrijf",
+      "description": "Door Reviu te gebruiken, transformeert u radicaal uw online reputatiebeheer:",
+      "list": {
+        "item1": "Bespaar tot 15 uur per week aan handmatig werk",
+        "item2": "Verhoog uw klanttevredenheid met gemiddeld 37%",
+        "item3": "Verbeter uw algemene Google-beoordeling met gemiddeld 0,8 punt",
+        "item4": "Transformeer ontevreden klanten in ambassadeurs van uw merk",
+        "item5": "Identificeer trends en verkrijg waardevolle inzichten over uw sterke punten en verbeterpunten"
+      }
+    },
+    "commitment": {
+      "title": "Onze toewijding",
+      "description1": "Wij zetten ons in voor de hoogste standaarden op het gebied van gegevensbescherming en ethiek. Al uw gegevens worden verwerkt in overeenstemming met de AVG, en u behoudt volledige controle over hoe onze AI namens u interageert.",
+      "description2": "Ons klantenserviceteam is 7 dagen per week beschikbaar om u te ondersteunen en ervoor te zorgen dat u het meeste uit ons platform haalt. We evolueren voortdurend, met regelmatige updates om de nieuwste ontwikkelingen in AI te integreren en te voldoen aan de veranderende behoeften van de markt."
+    },
+    "conclusion": "Geen training vereist: verbind uw Google Business Profile-account en laat onze AI de rest doen."
+  },
+  "contact": {
+    "title": "Neem contact op",
+    "subtitle": "Wij zijn er voor u",
+    "name": "Naam",
+    "email": "E-mail",
+    "subject": "Onderwerp",
+    "message": "Bericht",
+    "sendButton": "Verzenden",
+    "sendingButton": "Bezig met verzenden...",
+    "successMessage": "Uw bericht is succesvol verzonden. We nemen zo snel mogelijk contact met u op.",
+    "emailQuestion": "Een vraag? Schrijf ons op:",
+    "emailAddress": "contact@reviu.com",
+    "errors": {
+      "timeout": "De verbinding met de server duurde te lang. Probeer het opnieuw.",
+      "network": "Kan geen verbinding maken met de server. Controleer uw internetverbinding en probeer het opnieuw.",
+      "default": "Er is een fout opgetreden bij het verzenden van het bericht. Probeer het opnieuw."
+    }
+  },
+  "footer": {
+    "copyright": " 2025 Reviu. Alle rechten voorbehouden.",
+    "terms": "Gebruiksvoorwaarden",
+    "privacy": "Privacybeleid",
+    "cookies": "Cookies"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welkom op uw dashboard",
+    "stats": "Statistieken",
+    "analytics": "Analyses",
+    "account": "Mijn account",
+    "settings": "Instellingen"
+  },
+  "cookiesConsent": {
+    "message": "Wij gebruiken cookies om uw ervaring op onze site te verbeteren. Door verder te surfen, accepteert u ons gebruik van cookies.",
+    "accept": "Accepteren",
+    "decline": "Weigeren"
+  },
+  "faq": {
+    "title": "Veelgestelde vragen",
+    "items": [
+      {
+        "question": "Hoe werkt Reviu precies?",
+        "answer": "Reviu gebruikt geavanceerde kunstmatige intelligentie om klantrecensies op uw Google Business-pagina te analyseren en gepersonaliseerde en relevante antwoorden te genereren. Na het koppelen van uw Google Business Profile-account aan ons platform, bewaakt ons systeem automatisch alle nieuwe recensies en beantwoordt deze voor u, 24 uur per dag, 7 dagen per week."
+      },
+      {
+        "question": "Kan ik de door AI gegenereerde antwoorden personaliseren?",
+        "answer": "Absoluut! U kunt de tone of voice, communicatiestijl definiëren en zelfs antwoordsjablonen maken voor verschillende soorten recensies. Onze AI past zich aan uw voorkeuren aan, terwijl de antwoorden natuurlijk en gepersonaliseerd blijven voor elke klant."
+      },
+      {
+        "question": "Hoeveel tijd kost het om Reviu op te zetten?",
+        "answer": "De installatie is zeer snel, meestal minder dan 5 minuten. U hoeft alleen uw Google Business Profile-account te koppelen, enkele basisvoorkeuren in te stellen, en het systeem is klaar voor gebruik. Geen technische training of complexe integratie nodig."
+      },
+      {
+        "question": "Kan ik Reviu gebruiken voor meerdere vestigingen?",
+        "answer": "Ja, onze Pro- en Bedrijfspakketten stellen u in staat om meerdere vestigingen te beheren vanaf één dashboard. U kunt verschillende instellingen toepassen voor elke vestiging of gemeenschappelijke regels creëren."
+      },
+      {
+        "question": "Wat gebeurt er als ik niet tevreden ben met een door AI gegenereerd antwoord?",
+        "answer": "U heeft volledige controle over de antwoorden. U ontvangt een melding voor elk gegenereerd antwoord en u kunt deze op elk moment wijzigen of verwijderen. Ons systeem leert ook van uw wijzigingen om toekomstige antwoorden te verbeteren."
+      },
+      {
+        "question": "Kan Reviu me helpen bij het beheren van negatieve recensies?",
+        "answer": "Absoluut. Onze AI is speciaal ontworpen om negatieve recensies tactvol en professioneel te behandelen. Het herkent de specifieke zorgen van de klant, biedt passende excuses aan en stelt concrete oplossingen voor. Voor bijzonder gevoelige gevallen kunt u het systeem configureren om u te waarschuwen voordat het antwoord wordt gepubliceerd."
+      },
+      {
+        "question": "Hoe helpt Reviu me mijn lokale SEO te verbeteren?",
+        "answer": "Google waardeert bedrijven die actief reageren op hun recensies. Door Reviu te gebruiken om systematisch en snel op al uw recensies te reageren, verbetert u uw zichtbaarheid in lokale zoekresultaten. Bovendien stimuleren onze gepersonaliseerde antwoorden de betrokkenheid van klanten, wat ook een positieve factor is voor uw SEO."
+      },
+      {
+        "question": "Welke gegevens kan ik verkrijgen via Reviu?",
+        "answer": "Ons dashboard biedt u gedetailleerde analyses van uw recensies: tevredenheidstrends, terugkerende problemen, vergelijking met uw concurrenten, impact van uw antwoorden op de algemene beoordelingen, en nog veel meer. Deze inzichten helpen u om sterke punten en verbeterpunten van uw bedrijf te identificeren."
+      },
+      {
+        "question": "Hoe wordt het tarief voor grote bedrijven berekend?",
+        "answer": "Voor grote bedrijven met meerdere vestigingen bieden we aangepaste pakketten op basis van het aantal verkooppunten, het volume van verwerkte recensies en de specifieke vereiste functies. Neem contact op met ons commerciële team voor een offerte die is aangepast aan uw behoeften."
+      },
+      {
+        "question": "Is er een contractuele verplichting?",
+        "answer": "Nee, al onze pakketten zijn zonder verplichting. U bent vrij om uw abonnement op elk moment op te zeggen. We zijn ervan overtuigd dat u snel de toegevoegde waarde van onze service zult merken."
+      }
+    ]
+  },
+  "hero": {
+    "title": "Verhoog klanttevredenheid en zoekmachineoptimalisatie zonder moeite",
+    "description": "Onze AI beantwoordt automatisch de recensies op uw Google Business-pagina, 24 uur per dag, 7 dagen per week.",
+    "ctaButton": "Nu beginnen"
+  },
+  "quoteForm": {
+    "title": "Aanvraag voor een aangepaste offerte",
+    "description": "Vul dit formulier in om een offerte te ontvangen die is aangepast aan uw specifieke behoeften. Ons team neemt binnen 48 uur contact met u op.",
+    "contactInfo": "Contactgegevens",
+    "companyInfo": "Bedrijfsinformatie",
+    "projectInfo": "Projectinformatie",
+    "firstName": "Voornaam",
+    "lastName": "Achternaam",
+    "email": "Zakelijke e-mail",
+    "phone": "Telefoonnummer",
+    "companyName": "Bedrijfsnaam",
+    "country": "Land",
+    "address": "Adres",
+    "addressPlaceholder": "Straat en nummer",
+    "postalCode": "Postcode",
+    "city": "Stad",
+    "companyType": "Bedrijfstype",
+    "employees": "Aantal medewerkers",
+    "employeesPlaceholder": "Bijv: 42",
+    "budget": "Geschat budget",
+    "message": "Bericht / Specifieke behoeften",
+    "messagePlaceholder": "Beschrijf uw behoeften en verwachtingen voor deze oplossing...",
+    "submit": "Aanvraag indienen",
+    "submitting": "Bezig met verzenden...",
+    "cancel": "Annuleren",
+    "close": "Sluiten",
+    "successTitle": "Aanvraag succesvol verzonden!",
+    "thankYou": "Bedankt voor uw aanvraag!",
+    "successMessage": "We hebben uw aanvraag voor een aangepaste offerte ontvangen. Een van onze adviseurs zal uw dossier bestuderen en binnen 48 werkuren contact met u opnemen om uw specifieke behoeften te bespreken en een oplossing op maat voor te stellen.",
+    "errors": {
+      "required": "Dit veld is verplicht",
+      "emailInvalid": "Voer een geldig e-mailadres in",
+      "phoneInvalid": "Voer een geldig telefoonnummer in",
+      "submission": "Er is een fout opgetreden bij het verzenden van het formulier. Probeer het opnieuw."
+    }
+  },
+  "legal": {
+    "title": "Juridische kennisgeving",
+    "subtitle": "Laatste update: 20 april 2025",
+    "companyInfo": {
+      "title": "1. Juridische informatie",
+      "content1": "De Reviu-website wordt uitgegeven door:",
+      "companyName": "Reviu SAS",
+      "address": "Hoofdkantoor: 123 Avenue de la République, 75000 Parijs, Frankrijk",
+      "capital": "Maatschappelijk kapitaal: € 10.000",
+      "rcs": "RCS Parijs B 123 456 789",
+      "vatNumber": "Intracommunautair BTW-nummer: FR 12 345 678 910",
+      "director": "Directeur publicatie: Jean Dupont",
+      "email": "E-mail: contact@reviu.com",
+      "phone": "Telefoon: +33 1 23 45 67 89"
+    },
+    "hosting": {
+      "title": "2. Hosting",
+      "content": "De Reviu-site wordt gehost door:",
+      "name": "OVH SAS",
+      "address": "Hoofdkantoor: 2 rue Kellermann - 59100 Roubaix - Frankrijk",
+      "website": "Website: www.ovh.com"
+    },
+    "intellectualProperty": {
+      "title": "3. Intellectueel eigendom",
+      "content1": "Alle inhoud van deze site, inclusief maar niet beperkt tot graphics, afbeeldingen, teksten, video's, animaties, geluiden, logo's, gifs en iconen, evenals hun opmaak, zijn het exclusieve eigendom van Reviu, met uitzondering van handelsmerken, logo's of inhoud die toebehoren aan andere partnerbedrijven of auteurs.",
+      "content2": "Elke reproductie, distributie, wijziging, aanpassing, retransmissie of publicatie, zelfs gedeeltelijk, van deze elementen is ten strengste verboden zonder de uitdrukkelijke schriftelijke toestemming van Reviu. Deze weergave of reproductie, door welk proces dan ook, vormt een inbreuk die wordt bestraft door artikelen L.335-2 en volgende van de Franse Code de la Propriété Intellectuelle."
+    },
+    "personalData": {
+      "title": "4. Persoonlijke gegevens",
+      "content1": "De informatie die op onze site wordt verzameld, is onderworpen aan computerverwerking om uw gebruikerservaring te verbeteren en u gepersonaliseerde diensten aan te bieden.",
+      "content2": "In overeenstemming met de Franse wet op 'Informatique et Libertés' van 6 januari 1978, zoals gewijzigd, en de Europese Verordening nr. 2016/679/EU van 27 april 2016, heeft u recht op toegang, rectificatie, overdraagbaarheid en verwijdering van uw gegevens, of beperking van de verwerking.",
+      "content3": "U kunt deze rechten uitoefenen door contact met ons op te nemen via: privacy@reviu.com",
+      "content4": "Voor meer informatie over hoe wij uw gegevens verwerken, raadpleeg ons Privacybeleid."
+    },
+    "links": {
+      "title": "5. Hyperlinks",
+      "content1": "De Reviu-site kan hyperlinks bevatten naar andere websites of andere bronnen op internet. Reviu heeft geen middelen om de sites die verbonden zijn met zijn website te controleren en is niet verantwoordelijk voor de beschikbaarheid van dergelijke externe sites en bronnen.",
+      "content2": "Reviu kan niet aansprakelijk worden gesteld voor schade, van welke aard dan ook, die voortvloeit uit de inhoud van deze sites of externe bronnen, en met name uit de informatie, producten of diensten die zij aanbieden, of uit enig gebruik dat van deze elementen kan worden gemaakt."
+    },
+    "contact": {
+      "title": "6. Contact",
+      "content1": "Voor vragen met betrekking tot deze juridische kennisgeving kunt u contact met ons opnemen via:",
+      "contactEmail": "E-mail: legal@reviu.com",
+      "contactPhone": "Telefoon: +33 1 23 45 67 89"
+    }
+  },
+  "cookies": {
+    "title": "Cookiebeleid",
+    "subtitle": "Laatste update: 20 april 2025",
+    "intro": {
+      "title": "Wat zijn cookies?",
+      "content": "Cookies zijn kleine tekstbestanden die op uw apparaat (computer, tablet of mobiel) worden opgeslagen wanneer u een website bezoekt. Cookies worden veel gebruikt om websites efficiënter te laten werken en om informatie te verstrekken aan de eigenaren van de site."
+    },
+    "types": {
+      "title": "Soorten cookies die we gebruiken",
+      "essential": {
+        "title": "Essentiële cookies",
+        "content": "Deze cookies zijn nodig voor het functioneren van de website. Ze omvatten bijvoorbeeld cookies die u in staat stellen in te loggen op beveiligde delen van onze website, een winkelwagentje te gebruiken of gebruik te maken van elektronische facturatiediensten."
+      },
+      "analytics": {
+        "title": "Analytische cookies",
+        "content": "Deze stellen ons in staat om bezoekers te herkennen en te tellen en te zien hoe bezoekers zich door onze website bewegen tijdens het gebruik. Dit helpt ons om de werking van onze website te verbeteren, bijvoorbeeld door ervoor te zorgen dat gebruikers gemakkelijk vinden wat ze zoeken."
+      },
+      "functional": {
+        "title": "Functionele cookies",
+        "content": "Deze cookies worden gebruikt om u te herkennen wanneer u terugkeert naar onze website. Dit stelt ons in staat om onze inhoud voor u te personaliseren, u bij uw naam te begroeten en uw voorkeuren te onthouden (bijvoorbeeld uw taalkeuze of regio)."
+      },
+      "targeting": {
+        "title": "Targeting cookies",
+        "content": "Deze cookies registreren uw bezoek aan onze website, de pagina's die u heeft bezocht en de links die u heeft gevolgd. We gebruiken deze informatie om onze website en de advertenties die erop worden getoond relevanter te maken voor uw interesses."
+      }
+    },
+    "manage": {
+      "title": "Hoe cookies te beheren",
+      "content1": "De meeste webbrowsers bieden enige controle over de meeste cookies via de browserinstellingen. Voor meer informatie over cookies, inclusief hoe u kunt zien welke cookies zijn ingesteld en hoe u deze kunt beheren en verwijderen, bezoek www.aboutcookies.org of www.allaboutcookies.org.",
+      "content2": "Om de tracking van Google Analytics op onze website uit te schakelen, bezoek http://tools.google.com/dlpage/gaoptout."
+    },
+    "changes": {
+      "title": "Wijzigingen in ons cookiebeleid",
+      "content": "Eventuele wijzigingen die we in de toekomst in ons cookiebeleid aanbrengen, worden op deze pagina gepubliceerd en, indien van toepassing, per e-mail aan u meegedeeld. Controleer regelmatig of er updates of wijzigingen in ons cookiebeleid zijn."
+    },
+    "contact": {
+      "title": "Contact",
+      "content": "Als u vragen heeft over ons cookiebeleid, aarzel dan niet om contact met ons op te nemen via:",
+      "email": "E-mail: privacy@reviu.com",
+      "phone": "Telefoon: +33 1 23 45 67 89"
+    }
+  },
+  "terms": {
+    "title": "Algemene voorwaarden",
+    "subtitle": "Laatste update: 20 april 2025",
+    "intro": {
+      "content": "Welkom bij Reviu. Door toegang te krijgen tot of gebruik te maken van onze dienst, gaat u ermee akkoord gebonden te zijn aan deze Voorwaarden. Lees ze zorgvuldig door."
+    },
+    "definitions": {
+      "title": "1. Definities",
+      "content": "In deze Algemene Voorwaarden verwijzen de termen 'wij', 'ons' en 'onze' naar Reviu SAS. 'Dienst' verwijst naar het Reviu-platform dat toegankelijk is via onze website. 'Gebruiker', 'u' en 'uw' verwijzen naar de persoon die toegang krijgt tot of gebruik maakt van de Dienst, of naar het bedrijf of andere juridische entiteit namens welke die persoon toegang krijgt tot of gebruik maakt van de Dienst."
+    },
+    "acceptance": {
+      "title": "2. Aanvaarding van de voorwaarden",
+      "content": "Door toegang te krijgen tot onze Dienst, gaat u ermee akkoord gebonden te zijn aan deze Algemene Voorwaarden en ons Privacybeleid. Als u het niet eens bent met enig deel van deze Voorwaarden, mag u geen toegang krijgen tot de Dienst."
+    },
+    "accounts": {
+      "title": "3. Accounts",
+      "content1": "Wanneer u een account bij ons aanmaakt, moet u informatie verstrekken die te allen tijde nauwkeurig, volledig en actueel is. Het niet naleven van deze verplichting vormt een schending van de Voorwaarden, wat kan leiden tot onmiddellijke beëindiging van uw account op onze Dienst.",
+      "content2": "U bent verantwoordelijk voor het beschermen van het wachtwoord dat u gebruikt om toegang te krijgen tot de Dienst en voor alle activiteiten of acties die onder uw wachtwoord plaatsvinden, hetzij op onze Dienst, hetzij op een dienst van derden.",
+      "content3": "U stemt ermee in uw wachtwoord niet aan derden bekend te maken. U moet ons onmiddellijk op de hoogte stellen als u kennis heeft van een inbreuk op de beveiliging of ongeautoriseerd gebruik van uw account."
+    },
+    "use": {
+      "title": "4. Aanvaardbaar gebruik",
+      "content1": "Onze Dienst mag alleen worden gebruikt voor legitieme doeleinden en op een manier die de rechten van anderen niet schendt of het gebruik en genot van de Dienst door anderen beperkt of belemmert.",
+      "content2": "De Dienst mag op geen enkele manier worden gebruikt die schade aan de Dienst veroorzaakt of kan veroorzaken, of de beschikbaarheid of toegankelijkheid van de Dienst aantast."
+    },
+    "intellectual": {
+      "title": "5. Intellectueel eigendom",
+      "content1": "De Dienst en zijn oorspronkelijke inhoud, functies en functionaliteit zijn en blijven het exclusieve eigendom van Reviu SAS en zijn licentiegevers.",
+      "content2": "De Dienst is beschermd door auteursrechten, handelsmerken en andere wetten van Frankrijk en buitenlandse landen. Onze handelsmerken en handelsnaam mogen niet worden gebruikt in verband met enig product of dienst zonder de voorafgaande schriftelijke toestemming van Reviu SAS."
+    },
+    "termination": {
+      "title": "6. Beëindiging",
+      "content1": "We kunnen uw account onmiddellijk beëindigen of opschorten, zonder voorafgaande kennisgeving of aansprakelijkheid, om welke reden dan ook, inclusief zonder beperking als u de Voorwaarden schendt.",
+      "content2": "Na beëindiging vervalt uw recht om de Dienst te gebruiken onmiddellijk. Als u uw account wilt annuleren, kunt u eenvoudigweg stoppen met het gebruik van de Dienst."
+    },
+    "limitation": {
+      "title": "7. Beperking van aansprakelijkheid",
+      "content": "In geen geval zullen Reviu SAS, zijn directeuren, werknemers, partners, agenten, leveranciers of gelieerde partijen aansprakelijk zijn voor enige indirecte, incidentele, speciale, gevolgschade of punitieve schade, inclusief zonder beperking, verlies van winst, gegevens, gebruik, goodwill, of andere immateriële verliezen, die voortvloeien uit (i) uw toegang tot of gebruik van of onvermogen om toegang te krijgen tot of gebruik te maken van de Dienst; (ii) enig gedrag of inhoud van derden op de Dienst; (iii) alle inhoud verkregen van de Dienst; en (iv) onbevoegde toegang, gebruik of wijziging van uw transmissies of inhoud, hetzij op basis van garantie, contract, onrechtmatige daad (inclusief nalatigheid) of enige andere juridische theorie, ongeacht of we op de hoogte zijn gesteld van de mogelijkheid van dergelijke schade."
+    },
+    "changes": {
+      "title": "8. Wijzigingen in de voorwaarden",
+      "content": "We behouden ons het recht voor om naar eigen goeddunken deze Voorwaarden op elk moment te wijzigen of te vervangen. Als een herziening materieel is, zullen we proberen ten minste 30 dagen voordat de nieuwe voorwaarden van kracht worden, een kennisgeving te verstrekken. Wat een materiële wijziging vormt, zal naar ons eigen goeddunken worden bepaald."
+    },
+    "contact": {
+      "title": "9. Contact",
+      "content": "Als u vragen heeft over deze Voorwaarden, neem dan contact met ons op:",
+      "email": "E-mail: legal@reviu.com",
+      "phone": "Telefoon: +33 1 23 45 67 89"
+    }
+  }
+}

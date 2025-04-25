@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <h2>{t('contact.title')}</h2>
-      <p>{t('contact.emailQuestion')} <a href="mailto:contact@votresite.com">contact@votresite.com</a></p>
+      <p>{t('contact.emailQuestion')} <a href="mailto:{t('contact.emailAddress')}">{t('contact.emailAddress')}</a></p>
     </section>
   );
 };

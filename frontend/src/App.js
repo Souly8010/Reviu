@@ -28,6 +28,9 @@ function App() {
   const { t } = useTranslation();
   
   useEffect(() => {
+    // Forcer l'utilisation de l'espagnol
+    localStorage.setItem('i18nextLng', 'es');
+    
     AOS.init({
       duration: 1000,
       once: true,

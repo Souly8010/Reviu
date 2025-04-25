@@ -31,6 +31,8 @@ const LanguageSwitcher = () => {
         return '🇬🇧';
       case 'nl':
         return '🇳🇱';
+      case 'es':
+        return '🇪🇸';
       default:
         return '';
     }
@@ -88,6 +90,9 @@ const LanguageSwitcher = () => {
         </MenuItem>
         <MenuItem onClick={() => changeLanguage('en')} selected={currentLangCode === 'en'} sx={{ fontSize: '14px', padding: '8px 16px' }}>
           <span className="language-flag">🇬🇧</span> {t('languages.en')}
+        </MenuItem>
+        <MenuItem onClick={() => changeLanguage('es')} selected={currentLangCode === 'es'} sx={{ fontSize: '14px', padding: '8px 16px' }}>
+          <span className="language-flag">🇪🇸</span> {t('languages.es')}
         </MenuItem>
         <MenuItem onClick={() => changeLanguage('nl')} selected={currentLangCode === 'nl'} sx={{ fontSize: '14px', padding: '8px 16px' }}>
           <span className="language-flag">🇳🇱</span> {t('languages.nl')}
