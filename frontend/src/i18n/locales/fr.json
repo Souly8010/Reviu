@@ -20,6 +20,14 @@
     "es": "Espagnol",
     "nl": "Néerlandais"
   },
+  "partnership": {
+    "title": "Notre programme de partenariat",
+    "subtitle": "Rejoignez notre réseau de partenaires et développez votre entreprise",
+    "comingSoon": "Bientôt disponible",
+    "description": "Notre programme de partenariat est actuellement en cours de développement et sera bientôt disponible. Restez à l'écoute pour découvrir comment vous pouvez collaborer avec nous et bénéficier d'avantages exclusifs.",
+    "backToHome": "Retour à l'accueil",
+    "contactUs": "Contactez-nous"
+  },
   "auth": {
     "login": {
       "title": "Connexion",

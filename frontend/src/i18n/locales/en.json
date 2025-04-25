@@ -5,6 +5,7 @@
     "stats": "Statistics",
     "about": "About",
     "contact": "Contact",
+    "partnership": "Partnership",
     "login": "Log in",
     "register": "Register",
     "logout": "Log out",
@@ -16,7 +17,16 @@
   "languages": {
     "fr": "French",
     "en": "English",
+    "es": "Spanish",
     "nl": "Dutch"
+  },
+  "partnership": {
+    "title": "Our Partnership Program",
+    "subtitle": "Join our network of partners and grow your business",
+    "comingSoon": "Coming Soon",
+    "description": "Our partnership program is currently under development and will be available soon. Stay tuned to discover how you can collaborate with us and benefit from exclusive advantages.",
+    "backToHome": "Back to Home",
+    "contactUs": "Contact Us"
   },
   "auth": {
     "login": {
