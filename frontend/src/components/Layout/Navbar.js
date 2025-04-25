@@ -139,6 +139,13 @@ const Navbar = () => {
             >
               {t('navbar.contact')}
             </button>
+            <Link
+              to="/partnership"
+              className="nav-btn"
+              style={{ color: '#0ea5e9' }}
+            >
+              {t('navbar.partnership')}
+            </Link>
           </div>
         )}
         

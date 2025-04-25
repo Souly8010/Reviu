@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -21,10 +21,31 @@ import {
   ListItemIcon,
   ListItemText,
   IconButton,
-  Alert
+  Alert,
+  TextField,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Select,
+  InputAdornment,
+  Tooltip
 } from '@mui/material';
+import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement, BarElement, Title, Tooltip as ChartTooltip, Legend } from 'chart.js';
+import { Line, Bar } from 'react-chartjs-2';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+
+// Enregistrer les composants Chart.js nécessaires
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  PointElement,
+  LineElement,
+  BarElement,
+  Title,
+  ChartTooltip,
+  Legend
+);
 
 // Simuler des données pour le tableau de bord
 const mockUserData = {
@@ -36,9 +57,11 @@ const mockUserData = {
     remainingAudits: 3
   },
   recentAudits: [
-    { id: 1, siteName: 'example1.com', date: '10/04/2025', score: 87 },
-    { id: 2, siteName: 'example2.org', date: '05/04/2025', score: 62 },
-    { id: 3, siteName: 'example3.net', date: '28/03/2025', score: 93 }
+    { id: 1, siteName: 'example1.com', date: '10/04/2025', score: 87, type: 'SEO', status: 'Complété' },
+    { id: 2, siteName: 'example2.org', date: '05/04/2025', score: 62, type: 'Performance', status: 'Complété' },
+    { id: 3, siteName: 'example3.net', date: '28/03/2025', score: 93, type: 'Accessibilité', status: 'Complété' },
+    { id: 4, siteName: 'example4.io', date: '20/03/2025', score: 76, type: 'SEO', status: 'Complété' },
+    { id: 5, siteName: 'example5.co', date: '15/03/2025', score: 81, type: 'Performance', status: 'Complété' }
   ],
   notifications: [
     { id: 1, message: 'Votre abonnement sera renouvelé dans 15 jours', isRead: false, date: '12/04/2025' },
@@ -74,7 +97,13 @@ const Dashboard = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [userData, setUserData] = useState(null);
   const [activeTab, setActiveTab] = useState(0);
+  const [expanded, setExpanded] = useState(false);
   const [error, setError] = useState(null);
+  const [filterText, setFilterText] = useState('');
+  const [sortBy, setSortBy] = useState('date');
+  const [sortOrder, setSortOrder] = useState('desc');
+  const [filterType, setFilterType] = useState('all');
+  const chartRef = useRef(null);
 
   // Vérification de l'authentification
   useEffect(() => {
@@ -234,13 +263,13 @@ const Dashboard = () => {
         bgcolor: '#282c34',
         color: 'white',
         minHeight: '100vh',
-        pt: 2,
-        pb: 6
+        pt: 0,
+        pb: 2
       }}
     >
       <Container 
-        maxWidth="lg" 
-        sx={{ mt: 4, mb: 4 }}
+        maxWidth="xl" 
+        sx={{ mt: 1, mb: 1, px: { xs: 1, sm: 2, md: 3 } }}
         data-aos="fade-up"
         data-aos-duration="1000"
       >
@@ -251,7 +280,7 @@ const Dashboard = () => {
           sx={{ 
             fontWeight: 'bold',
             color: 'white',
-            mb: 4,
+            mb: 2,
             textAlign: 'center'
           }}
         >
@@ -262,8 +291,8 @@ const Dashboard = () => {
         <Paper 
           elevation={3} 
           sx={{ 
-            p: 3, 
-            mb: 4, 
+            p: { xs: 2, md: 3 }, 
+            mb: 2, 
             background: 'linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)',
             color: 'white',
             borderRadius: '12px'
@@ -274,7 +303,7 @@ const Dashboard = () => {
         >
           <Grid container spacing={3} alignItems="center">
             <Grid item xs={12} md={8}>
-              <Typography variant="h5">{t('dashboard.welcome', 'Bienvenue')}, {userData.userInfo.name}!</Typography>
+              <Typography variant="h6">{t('dashboard.welcome', 'Bienvenue')}, {userData.userInfo.name}!</Typography>
               <Typography variant="body1" sx={{ mt: 1 }}>
                 {t('dashboard.subscriptionStatus', 'Votre abonnement')}: <b>{userData.userInfo.subscription}</b>
               </Typography>
@@ -306,13 +335,14 @@ const Dashboard = () => {
 
         {/* Onglets principaux */}
         <Paper 
-          elevation={2} 
+          elevation={3} 
           sx={{ 
             borderRadius: '12px', 
             overflow: 'hidden', 
             mb: 4,
             bgcolor: '#1e2731', // Plus foncé que le fond principal
-            color: 'white'
+            color: 'white',
+            minHeight: 'calc(100vh - 120px)'
           }}
           data-aos="fade-up"
           data-aos-duration="1000"
@@ -326,13 +356,16 @@ const Dashboard = () => {
               backgroundColor: '#1a2027',
               '& .MuiTab-root': {
                 fontWeight: 'bold',
-                color: 'rgba(255, 255, 255, 0.7)'
+                color: 'rgba(255, 255, 255, 0.7)',
+                fontSize: '1.1rem',
+                py: 2
               },
               '& .Mui-selected': {
                 color: 'white !important'
               },
               '& .MuiTabs-indicator': {
-                backgroundColor: '#0ea5e9'
+                backgroundColor: '#0ea5e9',
+                height: '3px'
               }
             }}
           >
@@ -345,8 +378,8 @@ const Dashboard = () => {
           {/* Contenu de l'onglet Résumé */}
           <TabPanel value={activeTab} index={0}>
             <Grid container spacing={4}>
-              {/* Statistiques rapides */}
-              <Grid item xs={12} md={4}>
+              {/* Statistiques rapides - masqué pour donner plus de place à l'historique */}
+              <Grid item xs={12} md={4} sx={{ display: 'none' }}>
                 <Card elevation={2} sx={{ borderRadius: '10px', height: '100%', bgcolor: '#1e2731', color: 'white' }}>
                   <CardHeader 
                     title={t('dashboard.quickStats', 'Statistiques rapides')}
@@ -392,38 +425,100 @@ const Dashboard = () => {
                 </Card>
               </Grid>
 
-              {/* Derniers audits */}
-              <Grid item xs={12} md={8}>
-                <Card elevation={2} sx={{ borderRadius: '10px', height: '100%', bgcolor: '#1e2731', color: 'white' }}>
+              {/* Derniers audits - Version améliorée */}
+              <Grid item xs={12} md={12}>
+                <Card 
+                  elevation={3} 
+                  sx={{ 
+                    borderRadius: '12px', 
+                    minHeight: 'calc(100vh - 220px)', 
+                    bgcolor: 'rgba(30, 39, 49, 0.8)', 
+                    color: 'white',
+                    backdropFilter: 'blur(8px)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.25)',
+                      transform: 'translateY(-4px)'
+                    },
+                    overflow: 'hidden',
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
+                >
                   <CardHeader 
-                    title={t('dashboard.recentAudits', 'Audits récents')}
+                    title={
+                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Typography variant="h5" fontWeight="bold" color="white" sx={{ mr: 1 }}>
+                          {t('dashboard.recentAudits', 'Historique des audits')}
+                        </Typography>
+                        <Box 
+                          sx={{ 
+                            bgcolor: '#0ea5e9', 
+                            color: 'white', 
+                            borderRadius: '8px', 
+                            px: 2, 
+                            py: 0.5, 
+                            fontSize: '1rem', 
+                            ml: 1 
+                          }}
+                        >
+                          {userData.recentAudits.length}
+                        </Box>
+                      </Box>
+                    }
                     titleTypographyProps={{ variant: 'h6', fontWeight: 'bold', color: 'white' }}
-                    sx={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
+                    sx={{ 
+                      borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                      backgroundImage: 'linear-gradient(to right, rgba(14, 165, 233, 0.15), rgba(30, 39, 49, 0))'
+                    }}
                     action={
                       <Button 
-                        color="primary"
+                        variant="outlined"
                         onClick={handleViewAllAudits}
-                        sx={{ color: '#0ea5e9' }}
+                        endIcon={<span>→</span>}
+                        sx={{ 
+                          color: '#ffffff', 
+                          borderColor: 'rgba(255, 255, 255, 0.3)',
+                          '&:hover': {
+                            borderColor: '#0ea5e9',
+                            backgroundColor: 'rgba(14, 165, 233, 0.1)'
+                          },
+                          borderRadius: '8px',
+                          fontWeight: 'medium'
+                        }}
                       >
                         {t('dashboard.viewAll', 'Voir tout')}
                       </Button>
                     }
                   />
-                  <CardContent>
+                  <CardContent sx={{ p: 0, maxHeight: '400px', overflowY: 'auto' }}>
                     {userData.recentAudits.length > 0 ? (
-                      <List>
+                      <List sx={{ p: 0 }}>
                         {userData.recentAudits.map((audit) => (
                           <React.Fragment key={audit.id}>
                             <ListItem 
+                              sx={{ 
+                                p: 2.5,
+                                transition: 'all 0.2s ease',
+                                '&:hover': { 
+                                  backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                                  cursor: 'pointer'
+                                }
+                              }}
+                              onClick={() => handleViewAuditDetails(audit.id)}
                               secondaryAction={
                                 <Box 
                                   sx={{ 
-                                    bgcolor: audit.score > 80 ? 'rgba(22, 101, 52, 0.2)' : audit.score > 60 ? 'rgba(154, 52, 18, 0.2)' : 'rgba(185, 28, 28, 0.2)',
+                                    bgcolor: audit.score > 80 ? 'rgba(22, 101, 52, 0.3)' : audit.score > 60 ? 'rgba(154, 52, 18, 0.3)' : 'rgba(185, 28, 28, 0.3)',
                                     color: audit.score > 80 ? '#34d399' : audit.score > 60 ? '#fdba74' : '#f87171',
-                                    borderRadius: '16px',
-                                    px: 2,
-                                    py: 0.5,
-                                    fontWeight: 'bold'
+                                    borderRadius: '20px',
+                                    px: 2.5,
+                                    py: 1.5,
+                                    fontWeight: 'bold',
+                                    fontSize: '1.6rem',
+                                    minWidth: '110px',
+                                    textAlign: 'center',
+                                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)',
+                                    border: audit.score > 80 ? '1px solid rgba(52, 211, 153, 0.3)' : audit.score > 60 ? '1px solid rgba(253, 186, 116, 0.3)' : '1px solid rgba(248, 113, 113, 0.3)'
                                   }}
                                 >
                                   {audit.score}%
@@ -431,10 +526,37 @@ const Dashboard = () => {
                               }
                             >
                               <ListItemText 
-                                primary={audit.siteName} 
-                                secondary={audit.date}
+                                primary={
+                                  <Typography variant="h5" fontWeight="bold" color="white" sx={{ mb: 0.5 }}>
+                                    {audit.siteName}
+                                  </Typography>
+                                }
+                                secondary={
+                                  <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                                    <Box 
+                                      component="span"
+                                      sx={{ 
+                                        fontSize: '0.9rem',
+                                        color: 'rgba(255, 255, 255, 0.7)',
+                                        display: 'inline-flex',
+                                        alignItems: 'center',
+                                        '&::before': {
+                                          content: '""',
+                                          width: '8px',
+                                          height: '8px',
+                                          borderRadius: '50%',
+                                          backgroundColor: '#0ea5e9',
+                                          display: 'inline-block',
+                                          marginRight: '8px'
+                                        }
+                                      }}
+                                    >
+                                      {audit.date}
+                                    </Box>
+                                  </Box>
+                                }
                                 primaryTypographyProps={{ fontWeight: 'medium', color: 'white' }}
-                                secondaryTypographyProps={{ color: 'rgba(255, 255, 255, 0.7)' }}
+                                secondaryTypographyProps={{ component: 'div' }}
                               />
                             </ListItem>
                             {audit.id !== userData.recentAudits[userData.recentAudits.length - 1].id && (
@@ -444,9 +566,24 @@ const Dashboard = () => {
                         ))}
                       </List>
                     ) : (
-                      <Typography variant="body1" sx={{ textAlign: 'center', py: 3, color: 'white' }}>
-                        {t('dashboard.noAuditsYet', "Vous n'avez pas encore d'audits")}
-                      </Typography>
+                      <Box sx={{ textAlign: 'center', py: 6, px: 2 }}>
+                        <Typography variant="h6" sx={{ color: 'white', mb: 2 }}>
+                          {t('dashboard.noAuditsYet', "Vous n'avez pas encore d'audits")}
+                        </Typography>
+                        <Button 
+                          variant="contained"
+                          color="primary"
+                          sx={{
+                            background: 'linear-gradient(90deg, #0ea5e9 0%, #2563eb 100%)',
+                            borderRadius: '8px',
+                            py: 1.2,
+                            fontWeight: 'bold'
+                          }}
+                          onClick={handleStartAudit}
+                        >
+                          {t('dashboard.startFirstAudit', 'Lancer votre premier audit')}
+                        </Button>
+                      </Box>
                     )}
                   </CardContent>
                 </Card>
@@ -454,86 +591,433 @@ const Dashboard = () => {
             </Grid>
           </TabPanel>
 
-          {/* Contenu de l'onglet Mes audits */}
+          {/* Contenu de l'onglet Mes audits - Amélioré */}
           <TabPanel value={activeTab} index={1}>
             <Grid container spacing={3}>
+              {/* Graphique d'évolution des scores */}
               <Grid item xs={12}>
-                <Card elevation={2} sx={{ borderRadius: '10px', bgcolor: '#1e2731', color: 'white' }}>
+                <Card 
+                  elevation={3} 
+                  sx={{ 
+                    borderRadius: '12px', 
+                    bgcolor: 'rgba(30, 39, 49, 0.8)', 
+                    color: 'white',
+                    backdropFilter: 'blur(8px)',
+                    transition: 'all 0.3s ease',
+                    mb: 3,
+                    '&:hover': {
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.25)'
+                    },
+                    overflow: 'hidden',
+                    border: '1px solid rgba(255, 255, 255, 0.1)',
+                    display: { xs: 'none', md: 'block' }, 
+                    minHeight: '400px'
+                  }}
+                >
                   <CardHeader 
-                    title={t('dashboard.allAudits', 'Tous mes audits')}
+                    title={
+                      <Typography variant="h5" fontWeight="bold" color="white">
+                        {t('dashboard.auditTrends', "Évolution des scores d'audit")}
+                      </Typography>
+                    }
                     titleTypographyProps={{ variant: 'h6', fontWeight: 'bold', color: 'white' }}
-                    sx={{ borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}
+                    sx={{ 
+                      borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                      backgroundImage: 'linear-gradient(to right, rgba(14, 165, 233, 0.15), rgba(30, 39, 49, 0))'
+                    }}
                   />
-                  <CardContent>
+                  <CardContent sx={{ p: 3, height: '350px' }}>
                     {userData.recentAudits.length > 0 ? (
-                      <List>
-                        {userData.recentAudits.map((audit) => (
-                          <React.Fragment key={audit.id}>
-                            <ListItem 
-                              sx={{ 
-                                '&:hover': { 
-                                  backgroundColor: 'rgba(255, 255, 255, 0.05)' 
+                      <Box sx={{ height: '100%', position: 'relative' }}>
+                        <Line 
+                          ref={chartRef}
+                          options={{
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            scales: {
+                              y: {
+                                beginAtZero: true,
+                                max: 100,
+                                grid: {
+                                  color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                ticks: {
+                                  color: 'rgba(255, 255, 255, 0.7)'
                                 }
+                              },
+                              x: {
+                                grid: {
+                                  color: 'rgba(255, 255, 255, 0.1)'
+                                },
+                                ticks: {
+                                  color: 'rgba(255, 255, 255, 0.7)'
+                                }
+                              }
+                            },
+                            plugins: {
+                              legend: {
+                                display: true,
+                                labels: {
+                                  color: 'rgba(255, 255, 255, 0.9)'
+                                }
+                              },
+                              tooltip: {
+                                backgroundColor: 'rgba(30, 39, 49, 0.9)',
+                                titleColor: 'white',
+                                bodyColor: 'white',
+                                borderColor: 'rgba(14, 165, 233, 0.5)',
+                                borderWidth: 1,
+                                displayColors: false,
+                                callbacks: {
+                                  label: function(context) {
+                                    return context.dataset.label + ': ' + context.raw + '%';
+                                  }
+                                }
+                              }
+                            }
+                          }}
+                          data={{
+                            labels: [...userData.recentAudits].sort((a, b) => {
+                              // Convertir les dates (format DD/MM/YYYY) en objets Date
+                              const [aDay, aMonth, aYear] = a.date.split('/');
+                              const [bDay, bMonth, bYear] = b.date.split('/');
+                              const dateA = new Date(`${aYear}-${aMonth}-${aDay}`);
+                              const dateB = new Date(`${bYear}-${bMonth}-${bDay}`);
+                              return dateA - dateB;
+                            }).map(audit => audit.date),
+                            datasets: [
+                              {
+                                label: 'Score d\'audit',
+                                data: [...userData.recentAudits].sort((a, b) => {
+                                  const [aDay, aMonth, aYear] = a.date.split('/');
+                                  const [bDay, bMonth, bYear] = b.date.split('/');
+                                  const dateA = new Date(`${aYear}-${aMonth}-${aDay}`);
+                                  const dateB = new Date(`${bYear}-${bMonth}-${bDay}`);
+                                  return dateA - dateB;
+                                }).map(audit => audit.score),
+                                borderColor: '#0ea5e9',
+                                backgroundColor: 'rgba(14, 165, 233, 0.2)',
+                                borderWidth: 2,
+                                pointBorderColor: '#ffffff',
+                                pointBackgroundColor: '#0ea5e9',
+                                pointRadius: 5,
+                                pointHoverRadius: 7,
+                                tension: 0.2,
+                                fill: true
+                              }
+                            ]
+                          }}
+                        />
+                      </Box>
+                    ) : (
+                      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%' }}>
+                        <Typography variant="h6" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
+                          {t('dashboard.noDataForChart', 'Pas de données disponibles pour le graphique')}
+                        </Typography>
+                      </Box>
+                    )}
+                  </CardContent>
+                </Card>
+              </Grid>
+              
+              <Grid item xs={12}>
+                <Card 
+                  elevation={3} 
+                  sx={{ 
+                    borderRadius: '12px', 
+                    bgcolor: 'rgba(30, 39, 49, 0.8)', 
+                    color: 'white',
+                    backdropFilter: 'blur(8px)',
+                    transition: 'all 0.3s ease',
+                    '&:hover': {
+                      boxShadow: '0 8px 20px rgba(0, 0, 0, 0.25)'
+                    },
+                    overflow: 'hidden',
+                    border: '1px solid rgba(255, 255, 255, 0.1)'
+                  }}
+                >
+                  <CardHeader 
+                    title={
+                      <Box sx={{ display: 'flex', alignItems: 'center' }}>
+                        <Typography variant="h5" fontWeight="bold" color="white">
+                          {t('dashboard.allAudits', 'Historique complet des audits')}
+                        </Typography>
+                        <Box 
+                          sx={{ 
+                            bgcolor: '#0ea5e9', 
+                            color: 'white', 
+                            borderRadius: '8px', 
+                            px: 2, 
+                            py: 0.5, 
+                            fontSize: '1rem', 
+                            ml: 1 
+                          }}
+                        >
+                          {userData.recentAudits.length}
+                        </Box>
+                      </Box>
+                    }
+                    titleTypographyProps={{ variant: 'h6', fontWeight: 'bold', color: 'white' }}
+                    sx={{ 
+                      borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                      backgroundImage: 'linear-gradient(to right, rgba(14, 165, 233, 0.15), rgba(30, 39, 49, 0))'
+                    }}
+                    action={
+                      <Button 
+                        variant="outlined" 
+                        onClick={handleStartAudit}
+                        sx={{ 
+                          color: '#ffffff', 
+                          borderColor: 'rgba(255, 255, 255, 0.3)',
+                          '&:hover': {
+                            borderColor: '#0ea5e9',
+                            backgroundColor: 'rgba(14, 165, 233, 0.1)'
+                          },
+                          borderRadius: '8px',
+                          fontWeight: 'medium'
+                        }}
+                      >
+                        {t('dashboard.newAudit', 'Nouvel audit')}
+                      </Button>
+                    }
+                  />
+                  {/* Filtres et options de tri */}
+                  <Box sx={{ p: 2, borderBottom: '1px solid rgba(255, 255, 255, 0.1)' }}>
+                    <Grid container spacing={2} alignItems="center">
+                      <Grid item xs={12} md={4}>
+                        <TextField
+                          fullWidth
+                          variant="outlined"
+                          placeholder={t('dashboard.searchAudits', 'Rechercher des audits...')}
+                          value={filterText}
+                          onChange={(e) => setFilterText(e.target.value)}
+                          InputProps={{
+                            sx: {
+                              color: 'white',
+                              '& .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.3)'
+                              },
+                              '&:hover .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.5)'
+                              },
+                              '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                borderColor: '#0ea5e9'
+                              }
+                            }
+                          }}
+                          sx={{ bgcolor: 'rgba(0, 0, 0, 0.2)' }}
+                        />
+                      </Grid>
+                      <Grid item xs={6} md={3}>
+                        <FormControl fullWidth variant="outlined" sx={{ bgcolor: 'rgba(0, 0, 0, 0.2)' }}>
+                          <InputLabel id="filter-type-label" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>{t('dashboard.filterType', 'Type')}</InputLabel>
+                          <Select
+                            labelId="filter-type-label"
+                            value={filterType}
+                            onChange={(e) => setFilterType(e.target.value)}
+                            label={t('dashboard.filterType', 'Type')}
+                            sx={{ 
+                              color: 'white',
+                              '& .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.3)'
+                              },
+                              '&:hover .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.5)'
+                              },
+                              '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                borderColor: '#0ea5e9'
+                              }
+                            }}
+                          >
+                            <MenuItem value="all">{t('dashboard.filterAll', 'Tous')}</MenuItem>
+                            <MenuItem value="SEO">SEO</MenuItem>
+                            <MenuItem value="Performance">Performance</MenuItem>
+                            <MenuItem value="Accessibilité">Accessibilité</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </Grid>
+                      <Grid item xs={6} md={3}>
+                        <FormControl fullWidth variant="outlined" sx={{ bgcolor: 'rgba(0, 0, 0, 0.2)' }}>
+                          <InputLabel id="sort-by-label" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>{t('dashboard.sortBy', 'Trier par')}</InputLabel>
+                          <Select
+                            labelId="sort-by-label"
+                            value={sortBy}
+                            onChange={(e) => setSortBy(e.target.value)}
+                            label={t('dashboard.sortBy', 'Trier par')}
+                            sx={{ 
+                              color: 'white',
+                              '& .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.3)'
+                              },
+                              '&:hover .MuiOutlinedInput-notchedOutline': {
+                                borderColor: 'rgba(255, 255, 255, 0.5)'
+                              },
+                              '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                                borderColor: '#0ea5e9'
+                              }
+                            }}
+                          >
+                            <MenuItem value="date">{t('dashboard.sortDate', 'Date')}</MenuItem>
+                            <MenuItem value="score">{t('dashboard.sortScore', 'Score')}</MenuItem>
+                            <MenuItem value="name">{t('dashboard.sortName', 'Nom du site')}</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </Grid>
+                      <Grid item xs={6} md={2}>
+                        <Button 
+                          fullWidth
+                          variant="contained"
+                          onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
+                          sx={{ 
+                            bgcolor: 'rgba(14, 165, 233, 0.2)',
+                            color: 'white',
+                            '&:hover': {
+                              bgcolor: 'rgba(14, 165, 233, 0.3)'
+                            },
+                            height: '56px'
+                          }}
+                        >
+                          {sortOrder === 'asc' ? '↑ Ascendant' : '↓ Descendant'}
+                        </Button>
+                      </Grid>
+                    </Grid>
+                  </Box>
+                  <CardContent sx={{ p: 0, maxHeight: '400px', overflowY: 'auto' }}>
+                  
+                    {userData.recentAudits.length > 0 ? (
+                      <Grid container>
+                        {userData.recentAudits
+                          .filter(audit => {
+                            // Filtrage par texte
+                            const textMatch = filterText.trim() === '' || 
+                              audit.siteName.toLowerCase().includes(filterText.toLowerCase());
+                            
+                            // Filtrage par type
+                            const typeMatch = filterType === 'all' || audit.type === filterType;
+                            
+                            return textMatch && typeMatch;
+                          })
+                          .sort((a, b) => {
+                            // Tri par différentes colonnes
+                            if (sortBy === 'date') {
+                              // Convertir les dates (format DD/MM/YYYY) en objets Date
+                              const [aDay, aMonth, aYear] = a.date.split('/');
+                              const [bDay, bMonth, bYear] = b.date.split('/');
+                              const dateA = new Date(`${aYear}-${aMonth}-${aDay}`);
+                              const dateB = new Date(`${bYear}-${bMonth}-${bDay}`);
+                              return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+                            } else if (sortBy === 'score') {
+                              return sortOrder === 'asc' ? a.score - b.score : b.score - a.score;
+                            } else if (sortBy === 'name') {
+                              return sortOrder === 'asc' 
+                                ? a.siteName.localeCompare(b.siteName)
+                                : b.siteName.localeCompare(a.siteName);
+                            }
+                            return 0;
+                          })
+                          .map((audit) => (
+                          <Grid item xs={12} key={audit.id}>
+                            <Box 
+                              sx={{ 
+                                p: 3, 
+                                borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+                                transition: 'all 0.2s ease',
+                                '&:hover': { 
+                                  backgroundColor: 'rgba(255, 255, 255, 0.05)'
+                                },
+                                display: 'flex',
+                                flexDirection: { xs: 'column', md: 'row' },
+                                alignItems: { xs: 'flex-start', md: 'center' },
+                                justifyContent: 'space-between',
+                                gap: 2
                               }}
-                              secondaryAction={
+                            >
+                              <Box sx={{ flex: 1 }}>
+                                <Typography variant="h6" fontWeight="bold" color="white" sx={{ mb: 1 }}>
+                                  {audit.siteName}
+                                </Typography>
+                                <Box sx={{ display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 2 }}>
+                                  <Box 
+                                    component="span"
+                                    sx={{ 
+                                      fontSize: '0.9rem',
+                                      color: 'rgba(255, 255, 255, 0.7)',
+                                      display: 'inline-flex',
+                                      alignItems: 'center',
+                                      '&::before': {
+                                        content: '""',
+                                        width: '8px',
+                                        height: '8px',
+                                        borderRadius: '50%',
+                                        backgroundColor: '#0ea5e9',
+                                        display: 'inline-block',
+                                        marginRight: '8px'
+                                      }
+                                    }}
+                                  >
+                                    {audit.date}
+                                  </Box>
+                                  <Box 
+                                    component="span"
+                                    sx={{ 
+                                      fontSize: '0.8rem',
+                                      fontWeight: 'medium',
+                                      color: 'white',
+                                      bgcolor: 'rgba(14, 165, 233, 0.2)',
+                                      px: 1.5,
+                                      py: 0.5,
+                                      borderRadius: '12px',
+                                      border: '1px solid rgba(14, 165, 233, 0.3)'
+                                    }}
+                                  >
+                                    {audit.type}
+                                  </Box>
+                                </Box>
+                              </Box>
+                              
+                              <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mt: { xs: 2, md: 0 } }}>
+                                <Box 
+                                  sx={{ 
+                                    bgcolor: audit.score > 80 ? 'rgba(22, 101, 52, 0.3)' : audit.score > 60 ? 'rgba(154, 52, 18, 0.3)' : 'rgba(185, 28, 28, 0.3)',
+                                    color: audit.score > 80 ? '#34d399' : audit.score > 60 ? '#fdba74' : '#f87171',
+                                    borderRadius: '20px',
+                                    px: 2.5,
+                                    py: 1.2,
+                                    fontWeight: 'bold',
+                                    fontSize: '1.25rem',
+                                    minWidth: '80px',
+                                    textAlign: 'center',
+                                    boxShadow: '0 2px 6px rgba(0, 0, 0, 0.15)',
+                                    border: audit.score > 80 ? '1px solid rgba(52, 211, 153, 0.3)' : audit.score > 60 ? '1px solid rgba(253, 186, 116, 0.3)' : '1px solid rgba(248, 113, 113, 0.3)'
+                                  }}
+                                >
+                                  {audit.score}%
+                                </Box>
+                                
                                 <Button 
-                                  variant="outlined" 
-                                  size="small" 
-                                  color="primary"
+                                  variant="contained" 
                                   onClick={() => handleViewAuditDetails(audit.id)}
                                   sx={{ 
-                                    borderColor: '#0ea5e9', 
-                                    color: '#0ea5e9',
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    color: '#ffffff',
                                     '&:hover': {
-                                      borderColor: '#0ea5e9',
-                                      backgroundColor: 'rgba(14, 165, 233, 0.1)'
-                                    }
+                                      backgroundColor: 'rgba(14, 165, 233, 0.3)'
+                                    },
+                                    borderRadius: '8px',
+                                    fontWeight: 'medium',
+                                    px: 3
                                   }}
                                 >
                                   {t('dashboard.viewDetails', 'Détails')}
                                 </Button>
-                              }
-                            >
-                              <ListItemText 
-                                primary={
-                                  <Typography variant="subtitle1" fontWeight="medium" color="white">
-                                    {audit.siteName}
-                                  </Typography>
-                                }
-                                secondary={
-                                  <Grid container spacing={1} alignItems="center">
-                                    <Grid item>
-                                      <Typography variant="body2" sx={{ color: 'rgba(255, 255, 255, 0.7)' }}>
-                                        {audit.date}
-                                      </Typography>
-                                    </Grid>
-                                    <Grid item>
-                                      <Box 
-                                        component="span" 
-                                        sx={{ 
-                                          bgcolor: audit.score > 80 ? 'rgba(22, 101, 52, 0.2)' : audit.score > 60 ? 'rgba(154, 52, 18, 0.2)' : 'rgba(185, 28, 28, 0.2)',
-                                          color: audit.score > 80 ? '#34d399' : audit.score > 60 ? '#fdba74' : '#f87171',
-                                          borderRadius: '16px',
-                                          px: 1.5,
-                                          py: 0.3,
-                                          fontSize: '0.75rem',
-                                          fontWeight: 'bold'
-                                        }}
-                                      >
-                                        {audit.score}%
-                                      </Box>
-                                    </Grid>
-                                  </Grid>
-                                }
-                              />
-                            </ListItem>
-                            <Divider sx={{ backgroundColor: 'rgba(255, 255, 255, 0.1)' }} />
-                          </React.Fragment>
+                              </Box>
+                            </Box>
+                          </Grid>
                         ))}
-                      </List>
+                      </Grid>
                     ) : (
-                      <Box sx={{ py: 5, textAlign: 'center' }}>
-                        <Typography variant="body1" sx={{ mb: 2, color: 'white' }}>
+                      <Box sx={{ py: 8, textAlign: 'center', px: 4 }}>
+                        <Typography variant="h6" sx={{ mb: 3, color: 'white' }}>
                           {t('dashboard.noAuditsMessage', "Vous n'avez pas encore réalisé d'audit")}
                         </Typography>
                         <Button 
@@ -543,6 +1027,11 @@ const Dashboard = () => {
                           sx={{
                             background: 'linear-gradient(90deg, #0ea5e9 0%, #2563eb 100%)',
                             color: 'white',
+                            py: 1.5,
+                            px: 4,
+                            borderRadius: '10px',
+                            fontWeight: 'bold',
+                            fontSize: '1rem'
                           }}
                         >
                           {t('dashboard.startFirstAudit', 'Démarrer votre premier audit')}

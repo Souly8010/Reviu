@@ -18,6 +18,7 @@ import CookiesPolicy from './components/Legal/CookiesPolicy';
 import Checkout from './components/Checkout/Checkout';
 import Dashboard from './components/Dashboard/Dashboard';
 import NewAudit from './components/Audit/NewAudit';
+import Partnership from './components/Partnership/Partnership';
 import { scrollToSection } from './utils/scroll';
 import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
@@ -64,6 +65,7 @@ function App() {
           <Route path="/terms" element={<Terms />} />
           <Route path="/legal" element={<LegalNotice />} />
           <Route path="/cookies" element={<CookiesPolicy />} />
+          <Route path="/partnership" element={<Partnership />} />
           <Route path="/" element={
             <>
               <section id="hero">
