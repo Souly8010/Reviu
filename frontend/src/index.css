@@ -60,9 +60,10 @@ nav.main-nav {
 }
 
 .nav-logo img {
-  height: 120px;
-  width: 140px;
+  height: 160px;
+  width: 180px;
   margin-left: 15px;
+  object-fit: contain;
 }
 
 .navbar-nav-items {

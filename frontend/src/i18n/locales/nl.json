@@ -20,6 +20,14 @@
     "es": "Spaans",
     "nl": "Nederlands"
   },
+  "partnership": {
+    "title": "Ons partnerprogramma",
+    "subtitle": "Word lid van ons netwerk van partners en laat uw bedrijf groeien",
+    "comingSoon": "Binnenkort beschikbaar",
+    "description": "Ons partnerprogramma is momenteel in ontwikkeling en zal binnenkort beschikbaar zijn. Blijf op de hoogte om te ontdekken hoe u met ons kunt samenwerken en kunt profiteren van exclusieve voordelen.",
+    "backToHome": "Terug naar home",
+    "contactUs": "Neem contact op"
+  },
   "auth": {
     "login": {
       "title": "Inloggen",
