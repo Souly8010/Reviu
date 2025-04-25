@@ -27,7 +27,6 @@ import cookiesEs from './locales/cookies.es.json';
 
 // Configuration i18next
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources: {
@@ -44,11 +43,8 @@ i18n
         translation: nl
       }
     },
+    lng: 'fr',
     fallbackLng: 'fr',
-    detection: {
-      order: ['localStorage', 'navigator'],
-      caches: ['localStorage']
-    },
     interpolation: {
       escapeValue: false // réagit échappe déjà par défaut
     }
