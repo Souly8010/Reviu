@@ -200,13 +200,6 @@ const Navbar = () => {
               >
                 {t('navbar.register')}
               </Link>
-              <Link
-                to="/register"
-                className="btn"
-                style={{ marginRight: 0 }}
-              >
-                {t('navbar.tryFree')}
-              </Link>
             </>
           )}
         </div>
@@ -214,7 +207,12 @@ const Navbar = () => {
         {/* Menu hamburger pour mobile - non affiché sur les pages d'authentification */}
         {!isAuthPage && (
           <div className="d-only-mobile">
-            <HamburgerMenu isOpen={isMobileMenuOpen} toggleMenu={toggleMobileMenu} />
+            <HamburgerMenu 
+              isOpen={isMobileMenuOpen} 
+              toggleMenu={toggleMobileMenu} 
+              isLoggedIn={isLoggedIn} 
+              handleLogout={handleLogout} 
+            />
           </div>
         )}
       </div>

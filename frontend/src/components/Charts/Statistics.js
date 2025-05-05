@@ -59,11 +59,28 @@ const Statistics = () => {
   };
 
   const chartOptions = {
-    responsive: false,
-    maintainAspectRatio: false,
+    responsive: true,
+    maintainAspectRatio: true,
     plugins: {
       legend: {
-        position: 'bottom'
+        position: 'bottom',
+        labels: {
+          font: {
+            size: 12, // Taille de police réduite pour une meilleure adaptation
+            family: "'Inter', sans-serif"
+          },
+          color: '#ffffff'
+        }
+      },
+      tooltip: {
+        titleFont: {
+          size: 14,
+          family: "'Inter', sans-serif"
+        },
+        bodyFont: {
+          size: 13,
+          family: "'Inter', sans-serif"
+        }
       }
     }
   };
@@ -73,22 +90,18 @@ const Statistics = () => {
       <h2>{t('stats.charts.title')}</h2>
       <p>{t('stats.charts.description')}</p>
 
-      <div style={{
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '40px',
-        flexWrap: 'wrap',
-        marginTop: '40px'
-      }}>
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ width: '500px', height: '500px' }}>
-            <Pie data={pieData} options={chartOptions} width={500} height={500} />
+      <div className="chart-container">
+        <div className="chart-item pie-chart">
+          <h3>{t('navbar.stats')}</h3>
+          <div className="chart-wrapper">
+            <Pie data={pieData} options={chartOptions} />
           </div>
         </div>
 
-        <div style={{ textAlign: 'center' }}>
-          <div style={{ width: '600px', height: '500px' }}>
-            <Line data={lineData} options={chartOptions} width={600} height={500} />
+        <div className="chart-item line-chart">
+          <h3>{t('navbar.stats')}</h3>
+          <div className="chart-wrapper">
+            <Line data={lineData} options={chartOptions} />
           </div>
         </div>
       </div>

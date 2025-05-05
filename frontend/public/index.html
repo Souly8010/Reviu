@@ -3,7 +3,24 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    
+    <!-- Optimisations pour éviter les problèmes de flou -->
+    <style>
+      html, body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      * {
+        box-sizing: border-box;
+        transform-style: preserve-3d;
+      }
+      form, button, input, a, img {
+        transform: translateZ(0);
+        backface-visibility: hidden;
+      }
+    </style>
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"

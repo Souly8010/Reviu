@@ -16,6 +16,9 @@ const Home = () => {
       <Navbar />
       
       <section id="hero">
+        <div className="mobile-logo">
+          <img src="/images/logo.png" alt="Reviu Logo" />
+        </div>
         <h1>{t('hero.title')}</h1>
         <p>{t('hero.description')}</p>
         <a href="#pricing" className="cta-button" data-aos="fade-down" data-aos-delay="100"

@@ -11,7 +11,7 @@ body {
   padding: 0;
   background-color: #0f0f0f;
   color: #f3f4f6;
-  padding-top: 140px;
+  padding-top: 0; /* Pas besoin de padding avec position absolute */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -31,15 +31,17 @@ nav.main-nav {
   background-color: #1e3a8a;
   padding: 0;
   width: 100%;
-  position: fixed;
+  position: sticky; /* Modification de la position en sticky pour une cohérence sur toutes les pages et résolutions */
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  height: 120px; /* Hauteur fixe sur toutes les pages */
+  height: 75px; /* Hauteur augmentée */
   display: flex;
   align-items: center;
-  min-height: 120px;
+  min-height: 75px;
+  transition: height 0.3s ease;
+  overflow: visible; /* Assure que tout le contenu est visible */
 }
 
 .nav-container {
@@ -47,7 +49,6 @@ nav.main-nav {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  /* max-width: 1200px; */
   margin: 0 auto;
   flex-wrap: nowrap;
   padding: 0 20px;
@@ -57,13 +58,16 @@ nav.main-nav {
 .nav-logo {
   display: flex;
   align-items: center;
+  flex: 0 0 auto;
+  justify-content: center;
 }
 
 .nav-logo img {
-  height: 160px;
-  width: 180px;
+  height: 65px;
+  width: 125px;
   margin-left: 15px;
   object-fit: contain;
+  max-width: 100%;
 }
 
 .navbar-nav-items {
@@ -78,6 +82,9 @@ nav.main-nav {
   overflow-x: auto;
   scrollbar-width: none; /* Pour Firefox */
   -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+  padding: 0 10px; /* Espace sur les côtés */
+  width: 100%; /* Utiliser toute la largeur disponible */
+  max-width: 100%;
 }
 
 .navbar-nav-items::-webkit-scrollbar {
@@ -150,13 +157,13 @@ nav.main-nav {
   text-decoration: none;
   transition: background-color 0.3s ease;
   margin: 0 2px;
-  white-space: normal;
+  white-space: nowrap; /* Empêche le passage à la ligne */
   height: 36px;
   min-height: 36px;
 }
 
 .btn {
-  background-color: #0ea5e9;
+  background-color: #1e3a8a; /* Couleur bleue pour tous les boutons */
   color: white;
   border: none;
   cursor: pointer;
@@ -178,9 +185,47 @@ nav.main-nav {
 }
 
 section {
-  padding: 80px 20px;
+  padding: 60px 20px 60px 20px;
   max-width: 1200px;
   margin: auto;
+}
+
+#hero {
+  padding-top: 120px; /* Espace suffisant pour éviter le chevauchement avec la navbar */
+  margin-top: 0;
+  position: relative; /* Pour positionner le logo */
+}
+
+#hero h1 {
+  margin-bottom: 25px; /* Ajoute de l'espace entre le titre et la description avec l'IA */
+}
+
+#hero p {
+  margin-top: 15px; /* Assure un bon espacement de la description */
+}
+
+/* Logo mobile au-dessus du titre */
+.mobile-logo {
+  display: none; /* Masqué par défaut sur desktop */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.mobile-logo img {
+  width: 150px;
+  height: auto;
+  object-fit: contain;
+}
+
+section:last-of-type {
+  padding-bottom: 30px; /* Réduit l'espace sous la dernière section */
+}
+
+#stats {
+  padding-top: 0; /* Suppression complète de l'espace entre tarifs et statistiques */
+  padding-bottom: 0; /* Suppression de l'espace en bas des graphiques */
+  margin-top: -20px; /* Valeur négative pour rapprocher davantage les sections */
+  margin-bottom: -150px; /* Valeur ultra-négative pour un contact direct avec la section suivante */
 }
 
 /* Boutons */
@@ -246,10 +291,25 @@ section {
   line-height: 1.3;
 }
 
+/* Styles spécifiques pour les boutons dans les cartes de tarification */
+.feature-card a.btn,
+.feature-card2 a.btn,
+.feature-card3 a.btn,
+.feature-card4 a.btn {
+  background-color: #0ea5e9; /* Couleur bleu clair */
+  white-space: nowrap;
+  display: block; /* Permet le centrage */
+  width: 80%;
+  margin: 15px auto 0; /* Marge supérieure et centrage horizontal */
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* Flèches de scroll */
 .scroll-btn {
   position: absolute;
-  top: 60%;
+  top: 50%; /* Centrer verticalement */
   transform: translateY(-50%);
   background-color: #0ea5e9;
   border: none;
@@ -259,7 +319,12 @@ section {
   cursor: pointer;
   border-radius: 50%;
   z-index: 10;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .scroll-btn:hover {
   background-color: #0284c7;
@@ -277,6 +342,49 @@ canvas {
   margin-top: 20px;
 }
 
+/* Conteneurs de graphiques responsifs */
+.chart-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.chart-item {
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.chart-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Tailles spécifiques pour les différents types de graphiques */
+.pie-chart .chart-wrapper {
+  width: 350px;
+  height: 350px;
+  max-width: 90vw;
+}
+
+.line-chart .chart-wrapper {
+  width: 700px;
+  height: 600px;
+  max-width: 90vw;
+}
+
+.chart-item h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
 /* Footer */
 footer {
   background-color: #1e3a8a;
@@ -284,13 +392,227 @@ footer {
   padding: 30px;
   font-size: 14px;
   color: white;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 /* Responsive */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
+  .feature-card,
+  .feature-card2,
+  .feature-card3,
+  .feature-card4 {
+    flex: 0 0 430px;
+    min-width: 430px;
+    max-width: 430px;
+    padding: 25px;
+  }
+  
+  .scroll-btn.left {
+    left: -15px;
+  }
+  
+  .scroll-btn.right {
+    right: -15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-nav-items {
+    gap: 2px;
+  }
+  
+  .nav-btn {
+    font-size: 0.75rem;
+    padding: 5px 6px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  /* Activer le menu hamburger */
+  .d-only-mobile {
+    display: block;
+  }
+  
+  .hamburger-menu {
+    display: flex;
+  }
+  
+  /* Garder la navigation standard visible pour tous les écrans */
+  .navbar-nav-items {
+    display: flex;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 5px;
+    max-width: calc(100% - 180px); /* Espace pour le logo */
+  }
+  
+  /* Ajuster l'espacement dans la navbar */
+  .nav-container {
+    padding: 0 15px;
+    justify-content: space-between;
+  }
+  
+  /* Réduire la taille du logo pour tous types de pages */
+  .nav-logo img {
+    height: 65px;
+    width: 125px;
+  }
+  
+  /* Ajuster la hauteur de la navbar */
   nav.main-nav {
-    flex-direction: column;
+    height: 75px;
+    min-height: 75px;
+    overflow: visible;
+    position: sticky !important;
+    top: 0 !important;
+  }
+  
+  /* Ajuster l'espacement du body */
+  body {
+    padding-top: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* Afficher le logo au-dessus du titre dans le hero sur mobile */
+  .mobile-logo {
+    display: block;
+  }
+  
+  /* Ajuster l'espacement du hero sur mobile avec le logo */
+  #hero {
+    padding-top: 100px;
+  }
+  nav.main-nav {
+    flex-direction: row; /* Garder l'orientation horizontale */
     text-align: center;
+    height: 75px;
+    min-height: 75px;
+    padding: 0 5px;
+    position: sticky !important;
+    top: 0 !important;
+  }
+  
+  /* Afficher les liens importants et masquer les autres liens de navigation */
+  .navbar-nav-items {
+    display: none !important;
+  }
+  
+  /* Afficher le menu hamburger sur mobile */
+  .d-only-mobile {
+    display: flex !important;
+    align-items: center;
+    margin-left: 10px;
+  }
+  
+  /* Optimiser la navbar sur mobile */
+  .nav-container {
+    justify-content: space-between;
+    padding: 0 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Distribuer les éléments correctement sur mobile */
+  .language-container {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+  
+  /* Réduire la taille du bouton de traduction sur mobile */
+  .language-switcher button {
+    padding: 4px 8px !important;
+    font-size: 0.75rem !important;
+    min-width: 0 !important;
+  }
+  
+  .language-switcher .MuiButton-startIcon,
+  .language-switcher .MuiButton-endIcon {
+    margin: 0 2px !important;
+  }
+  
+  /* Masquer le logo dans la navbar sur mobile */
+  .nav-logo {
+    display: none; /* Masquer le logo dans la navbar sur mobile */
+  }
+  
+  /* S'assurer que les boutons d'authentification restent visibles */
+  .navbar-buttons {
+    display: flex;
+    order: 3;
+    margin-left: auto;
+    margin-right: 0;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  /* Optimiser l'espace entre les éléments */
+  .nav-btn {
+    font-size: 0.7rem;
+    padding: 4px 6px;
+    margin: 0 1px;
+  }
+  
+  /* Ajuster le conteneur des éléments de navigation */
+  .navbar-nav-items {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+  }
+  
+  /* Ajuster les boutons dans la navbar */
+  .navbar-buttons .btn,
+  .navbar-buttons .btn1,
+  .navbar-buttons .nav-btn {
+    padding: 6px 8px;
+    font-size: 0.7rem;
+    height: 32px;
+    min-height: 32px;
+    width: auto;
+    min-width: 0;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Styles spécifiques pour toutes les pages (incluant auth et pages légales) */
+  body.auth-page .main-nav,
+  body.legal-page .main-nav {
+    height: 75px !important;
+    min-height: 75px !important;
+  }
+  
+  /* Ajuster les styles des boutons */
+  .navbar-buttons .btn,
+  .navbar-buttons .btn1 {
+    padding: 6px 10px;
+    min-height: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+  }
+
+  .navbar-buttons {
+    margin-left: 5px;
+    gap: 3px;
+  }
+  
+  /* Ajuster la disposition sur petits écrans */
+  body {
+    padding-top: 0;
+  }
+
+  /* Ajuster la position du sélecteur de langue */
+  .language-container {
+    margin-right: 0;
+    order: 2;
   }
 
   canvas#avisChart,
@@ -303,7 +625,282 @@ footer {
   .feature-card2,
   .feature-card3,
   .feature-card4 {
+    flex: 0 0 90%;
+    min-width: 90%;
+    max-width: 100%;
     padding: 20px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+  
+  /* Style spécifique pour les features en vue mobile */
+  .feature-wrapper.mobile-view {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 30px;
+  }
+  
+  .feature-wrapper.mobile-view .scroll-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centrer parfaitement */
+    margin-top: 0; /* Supprimer le décalage */
+    z-index: 20;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .feature-wrapper.mobile-view .scroll-btn.disabled {
+    opacity: 0.5;
+    cursor: default;
+  }
+  
+  .feature-mobile-container {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 30px;
+  }
+  
+  /* Pagination dots pour mobile */
+  .pagination-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+  }
+  
+  .pagination-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .pagination-dot.active {
+    background-color: #0ea5e9;
+    transform: scale(1.2);
+  }
+  
+  /* Indicateur de position des cartes */
+  .card-indicator {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #d1d5db;
+  }
+  
+  /* Ajuster les sections pour mobile */
+  section {
+    padding: 60px 15px;
+  }
+  
+  /* Ajuster les titres pour mobile */
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  /* Configuration spécifique pour très petits écrans */
+  .mobile-logo img {
+    width: 120px;
+    margin-bottom: 15px;
+  }
+  .nav-container {
+    padding: 0 5px;
+  }
+  
+  /* Optimisation du logo pour petits écrans */
+  .nav-logo {
+    max-width: 80px;
+  }
+  
+  .nav-logo img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+  }
+  
+  /* Optimisation des boutons pour petits écrans */
+  .navbar-buttons .btn,
+  .navbar-buttons .btn1,
+  .navbar-buttons .nav-btn {
+    padding: 4px 6px;
+    font-size: 0.65rem;
+    height: 28px;
+    min-height: 28px;
+    border-radius: 6px;
+  }
+  
+  /* Optimisation du sélecteur de langue pour petits écrans */
+  .language-switcher button {
+    padding: 2px 4px !important;
+    font-size: 0.7rem !important;
+  }
+  
+  /* Optimiser les boutons sur très petit écran */
+  .navbar-buttons {
+    gap: 10px;
+    margin-right: 5px;
+  }
+  
+  .navbar-buttons .btn,
+  .navbar-buttons .btn1,
+  .navbar-buttons .nav-btn {
+    padding: 0 8px;
+    font-size: 0.75rem;
+    height: 26px;
+    min-height: 26px;
+    border-radius: 4px;
+    width: auto;
+    min-width: 85px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-width: 120px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Améliorer la netteté du texte */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  nav.main-nav {
+    height: 75px;
+    min-height: 75px;
+    position: sticky !important;
+    top: 0 !important;
+  }
+  
+  body {
+    padding-top: 0; /* Cohérent avec le body global */
+  }
+  
+  /* Réduire la taille de police générale */
+  body {
+    font-size: 0.95rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Ajustements des graphiques pour mobile */
+  .chart-container {
+    gap: 20px;
+  }
+  
+  .pie-chart .chart-wrapper {
+    width: 300px;
+    height: 300px;
+    max-width: 95vw;
+    padding: 5px;
+  }
+  
+  .line-chart .chart-wrapper {
+    width: 400px;
+    height: 380px;
+    max-width: 95vw;
+    padding: 5px;
+  }
+  
+  .chart-item h3 {
+    font-size: 1.1rem;
+  }
+  
+  /* Cartes de fonctionnalités et prix */
+  .feature-card,
+  .feature-card2,
+  .feature-card3,
+  .feature-card4 {
+    flex: 0 0 100%;
+    min-width: 100%;
+    padding: 15px;
+  }
+  
+  /* Boutons de navigation */
+  .feature-wrapper.mobile-view .scroll-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+    top: 45%;
+  }
+  
+  .feature-wrapper.mobile-view .scroll-btn.left {
+    left: 0;
+  }
+  
+  .feature-wrapper.mobile-view .scroll-btn.right {
+    right: 0;
+  }
+  
+  /* Style des titres des cartes */
+  .feature-card h3,
+  .feature-card2 h3,
+  .feature-card3 h3,
+  .feature-card4 h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  
+  /* Ajustements des sections */
+  section {
+    padding: 40px 10px;
+  }
+  
+  /* Espacements réduits pour économiser de l'espace */
+  .pagination-dots {
+    margin-top: 15px;
+    gap: 6px;
+  }
+  
+  .pagination-dot {
+    width: 8px;
+    height: 8px;
+  }
+  
+  /* Menu mobile plus large */
+  .mobile-menu {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ajustements des boutons */
+  .btn, .btn1 {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  
+  /* Réduction des marges pour les listes */
+  ul {
+    margin-left: 15px;
+  }
+  
+  /* Optimiser le footer sur mobile */
+  footer {
+    padding: 20px 10px;
+    font-size: 12px;
+    box-sizing: border-box;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
   }
 }
 
@@ -381,14 +978,39 @@ footer {
 .feature-card3 .pro-badge,
 .feature-card4 .pro-badge {
   position: absolute;
-  top: -1px;
-  right: 0px;
+  top: -10px;
+  right: 10px;
   background-color: #0ea5e9;
   color: white;
   padding: 5px 10px;
-  border-radius: 8px 8px 8px 8px;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  z-index: 5;
+}
+
+/* Animation du badge PRO au survol de la carte */
+.feature-card:hover .pro-badge,
+.feature-card2:hover .pro-badge,
+.feature-card3:hover .pro-badge,
+.feature-card4:hover .pro-badge {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 480px) {
+  .feature-card .pro-badge,
+  .feature-card2 .pro-badge,
+  .feature-card3 .pro-badge,
+  .feature-card4 .pro-badge {
+    top: -8px;
+    right: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
+  }
 }
 
 /* Styles pour les pages d'authentification */
@@ -595,6 +1217,160 @@ footer {
 .navbar-buttons a[href="/login"]:hover {
   color: #facc15;
   background-color: transparent;
+}
+
+/* Styles pour le menu mobile et hamburger */
+.d-only-mobile {
+  display: none;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 1001;
+  position: relative;
+}
+
+.hamburger-menu span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.hamburger-menu.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-menu.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.mobile-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 85%;
+  max-width: 350px;
+  height: 100%;
+  background-color: #1e3a8a;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.close-button {
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-grow: 1;
+}
+
+.mobile-nav-btn {
+  padding: 15px 0;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.mobile-nav-btn:hover {
+  color: #facc15;
+}
+
+.mobile-nav-btn.special {
+  color: #0ea5e9;
+}
+
+.mobile-menu-auth {
+  margin-top: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mobile-btn {
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+  border: none;
+  background-color: #1e3a8a;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.mobile-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.mobile-btn.highlight {
+  background-color: #0ea5e9;
+  border: none;
+}
+
+.mobile-btn.highlight:hover {
+  background-color: #0284c7;
 }
 
 /* Cette règle ne s'applique que sur les pages d'authentification */

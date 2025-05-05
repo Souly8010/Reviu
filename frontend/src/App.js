@@ -44,6 +44,47 @@ function App() {
     scrollToSection('pricing', 1500);
   };
 
+  // Fonction pour déterminer si la page actuelle est une page d'authentification
+  const isAuthPage = (pathname) => {
+    return ["/login", "/register", "/forgot-password", "/reset-password"].some(path => 
+      pathname.startsWith(path)
+    );
+  };
+
+  // Fonction pour déterminer si la page actuelle est une page légale
+  const isLegalPage = (pathname) => {
+    return ["/privacy", "/terms", "/legal", "/cookies"].some(path => 
+      pathname === path
+    );
+  };
+
+  // Appliquer les classes appropriées au body en fonction de l'URL
+  useEffect(() => {
+    const handleLocationChange = () => {
+      const pathname = window.location.pathname;
+      
+      // Réinitialiser les classes
+      document.body.classList.remove('auth-page', 'legal-page');
+      
+      // Ajouter les classes appropriées
+      if (isAuthPage(pathname)) {
+        document.body.classList.add('auth-page');
+      } else if (isLegalPage(pathname)) {
+        document.body.classList.add('legal-page');
+      }
+    };
+    
+    // Exécuter au chargement initial
+    handleLocationChange();
+    
+    // S'abonner aux changements d'URL
+    window.addEventListener('popstate', handleLocationChange);
+    
+    return () => {
+      window.removeEventListener('popstate', handleLocationChange);
+    };
+  }, []);
+
   return (
     <Router>
       <div className="App">
@@ -105,9 +146,12 @@ function App() {
               <Contact />
 
               <footer style={{
-                padding: '40px 20px 20px',
+                padding: '20px 20px 30px',
                 backgroundColor: '#1e3a8a',
-                borderTop: '1px solid #1f2937'
+                borderTop: '1px solid #1f2937',
+                width: '100%',
+                boxSizing: 'border-box',
+                marginTop: '20px'
               }}>
                 <div style={{
                   maxWidth: '1200px',
@@ -120,24 +164,25 @@ function App() {
                   <div style={{
                     display: 'flex',
                     justifyContent: 'center',
-                    gap: '20px',
-                    marginBottom: '20px',
+                    gap: '15px',
+                    marginBottom: '15px',
+                    padding: '0 20px',
                     flexWrap: 'wrap'
                   }}>
-                    <a href="/privacy" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    <a href="/privacy" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem', padding: '5px 10px' }}>
                       {t('privacy.title', 'Charte de Confidentialité')}
                     </a>
-                    <a href="/terms" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    <a href="/terms" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem', padding: '5px 10px' }}>
                       {t('footer.terms', 'Conditions d\'utilisation')}
                     </a>
-                    <a href="/legal" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    <a href="/legal" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem', padding: '5px 10px' }}>
                       {t('footer.legal', 'Mentions Légales')}
                     </a>
-                    <a href="/cookies" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '0.9rem' }}>
+                    <a href="/cookies" style={{ color: '#ffffff', textDecoration: 'none', fontSize: '1rem', padding: '5px 10px' }}>
                       {t('footer.cookies', 'Politique des Cookies')}
                     </a>
                   </div>
-                  <div style={{ color: '#ffffff', fontSize: '0.85rem' }}>
+                  <div style={{ color: '#ffffff', fontSize: '0.95rem', lineHeight: '1.3', maxWidth: '800px', margin: '0 auto', padding: '0 20px' }}>
                     {t('footer.copyright')}
                   </div>
                 </div>
