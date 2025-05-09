@@ -16,8 +16,8 @@ const Home = () => {
       <Navbar />
       
       <section id="hero">
-        <div className="mobile-logo">
-          <img src="/images/logo.png" alt="Reviu Logo" />
+        <div className="mobile-logo-container">
+          <div className="text-logo">REVIU</div>
         </div>
         <h1>{t('hero.title')}</h1>
         <p>{t('hero.description')}</p>

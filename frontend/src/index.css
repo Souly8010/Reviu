@@ -196,6 +196,39 @@ section {
   position: relative; /* Pour positionner le logo */
 }
 
+/* Style pour le logo mobile dans le hero */
+.mobile-logo-container {
+  display: block; /* Toujours visible */
+  text-align: center;
+  margin: 40px auto;
+  width: 100%;
+}
+
+.text-logo {
+  font-size: 4rem;
+  font-weight: 800;
+  color: #0ea5e9;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.4);
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #0ea5e9, #1e3a8a);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  padding: 10px;
+  display: inline-block;
+}
+
+.mobile-hero-logo {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
 #hero h1 {
   margin-bottom: 25px; /* Ajoute de l'espace entre le titre et la description avec l'IA */
 }
@@ -476,8 +509,10 @@ footer {
 
 @media screen and (max-width: 768px) {
   /* Afficher le logo au-dessus du titre dans le hero sur mobile */
-  .mobile-logo {
+  .mobile-logo-container {
     display: block;
+    margin-top: 40px;
+    margin-bottom: 40px;
   }
   
   /* Ajuster l'espacement du hero sur mobile avec le logo */
