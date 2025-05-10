@@ -1,8 +1,29 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+// Initialisation de Stripe avec gestion d'erreur
+let stripe;
+try {
+  if (process.env.STRIPE_SECRET_KEY) {
+    stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+    console.log('Stripe initialisé avec succès');
+  } else {
+    console.log('ATTENTION: Clé Stripe non définie - fonctionnalités de paiement désactivées');
+    stripe = null;
+  }
+} catch (error) {
+  console.error('Erreur lors de l\'initialisation de Stripe:', error.message);
+  stripe = null;
+}
 const Payment = require('../models/Payment');
 
 const stripeController = {
     createPaymentIntent: async (req, res) => {
+        // Si Stripe n'est pas initialisé, renvoyer une erreur
+        if (!stripe) {
+            return res.status(503).json({ 
+                success: false, 
+                message: 'Le service de paiement est temporairement indisponible. Veuillez réessayer plus tard.'
+            });
+        }
+
         const { paymentMethodId, plan, userId } = req.body;
 
         try {
@@ -64,6 +85,14 @@ const stripeController = {
 
     // Webhook pour gérer les événements Stripe
     handleWebhook: async (req, res) => {
+        // Si Stripe n'est pas initialisé, renvoyer une erreur
+        if (!stripe) {
+            return res.status(503).json({ 
+                success: false, 
+                message: 'Le service de paiement est temporairement indisponible.'
+            });
+        }
+        
         const sig = req.headers['stripe-signature'];
         const endpointSecret = process.env.STRIPE_WEBHOOK_SECRET;
 
