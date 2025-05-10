@@ -24,6 +24,8 @@ Thumbs.db
 .env.*
 frontend/.env
 backend/.env
+.htaccess
+testDbConnection.js
 
 # IDE/editor folders
 .vscode/
